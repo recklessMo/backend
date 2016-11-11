@@ -1,6 +1,6 @@
 /bower_components
 /node_modules
-/goods.iml
+/backend.iml
 /build
 /src/main/webapp/app
 /src/main/webapp/vendor

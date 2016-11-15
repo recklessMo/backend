@@ -100,11 +100,11 @@
             title: '教务设置',
             templateUrl: helper.basepath('custom/admin/edu-setting/edu-setting-worktable.html')
         })
-        .state('app.todo', {
-            url: '/todo',
-            title: '待办事项',
-            templateUrl: helper.basepath('custom/self/todo.html'),
-            controller: 'TodoController'
+        .state('app.upload', {
+            url: '/upload',
+            title: '文件上传',
+            templateUrl: helper.basepath('custom/admin/img/img-list.html'),
+            resolve: helper.resolveFor('angularFileUpload', 'filestyle')
         })
       .state('app.hall', {
           url: '/hall/:tab',

@@ -30,6 +30,8 @@
         <property name="maxPoolSize" value="${maxPoolSize}"/>
         <property name="maxIdleTime" value="${maxIdleTime}"/>
         <property name="acquireIncrement" value="${acquireIncrement}"/>
+        <property name="preferredTestQuery" value="${preferredTestQuery}"/>
+        <property name="idleConnectionTestPeriod" value="${idleConnectionTestPeriod}"/>
     </bean>
 
     <!--  配置mybatis sqlsessionfactory -->

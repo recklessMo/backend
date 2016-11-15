@@ -6,6 +6,7 @@ import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.PostConstruct;
 import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
 
@@ -15,12 +16,16 @@ import java.io.StringWriter;
 @Service
 public class TemplateService {
 
+    private  VelocityEngine ve = new VelocityEngine();
 
-    public String getTemplate(VelocityContext velocityContext, String fileName) throws Exception{
-        VelocityEngine ve = new VelocityEngine();
+    @PostConstruct
+    public void init() throws Exception{
         ve.setProperty("resource.loader", "class");
         ve.setProperty("class.resource.loader.class", "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
         ve.init();
+    }
+
+    public String getTemplate(VelocityContext velocityContext, String fileName) throws Exception{
         StringWriter sw = new StringWriter();
         Template template = ve.getTemplate(fileName, "UTF-8");
         template.merge(velocityContext, sw);

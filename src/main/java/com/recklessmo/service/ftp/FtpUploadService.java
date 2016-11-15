@@ -18,21 +18,46 @@ import java.io.InputStream;
 @Service
 public class FtpUploadService {
 
-    public void updatFileByFtp(String directory, String content, String fileName)throws Exception{
+    private FTPClient getFtpClient(String directory) throws Exception{
         FTPClient ftpClient = new FTPClient();
+        //WFWZ005300
+        //x8b5e4X9
+        ftpClient.connect("119.10.40.62");
+        ftpClient.login("WFWZ005300", "x8b5e4X9");
+        //设置上传目录
+        ftpClient.changeWorkingDirectory(directory);
+        ftpClient.setBufferSize(1024);
+        ftpClient.setControlEncoding("UTF-8");
+        //设置文件类型
+        ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+        return ftpClient;
+    }
+
+    public void updatFileByFtp(String directory, String content, String fileName)throws Exception{
         InputStream fis = null;
+        FTPClient ftpClient = null;
         try{
-            //WFWZ005300
-            //x8b5e4X9
-            ftpClient.connect("119.10.40.62");
-            ftpClient.login("WFWZ005300", "x8b5e4X9");
             fis = new ByteArrayInputStream(content.getBytes("UTF-8"));
-            //设置上传目录
-            ftpClient.changeWorkingDirectory(directory);
-            ftpClient.setBufferSize(1024);
-            ftpClient.setControlEncoding("UTF-8");
-            //设置文件类型
-            ftpClient.setFileType(FTPClient.BINARY_FILE_TYPE);
+            ftpClient = getFtpClient(directory);
+            ftpClient.storeFile(fileName, fis);
+        }catch (Exception e){
+            e.printStackTrace();
+            throw e;
+        }finally {
+            IOUtils.closeQuietly(fis);
+            try{
+                ftpClient.disconnect();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void updatInputStreamByFtp(String directory, InputStream is, String fileName)throws Exception{
+        InputStream fis = is;
+        FTPClient ftpClient = null;
+        try{
+            ftpClient = getFtpClient(directory);
             ftpClient.storeFile(fileName, fis);
         }catch (Exception e){
             e.printStackTrace();

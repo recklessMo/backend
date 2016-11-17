@@ -68,10 +68,7 @@
                 data : {id:userId, type:2}
             })
             dialog.closePromise.then(function(data){
-                if(data.value != 'reload'){
-                    return;
-                }
-                $scope.userTableParams.reload();
+                $scope.imgTableParams.reload();
             });
         }
 

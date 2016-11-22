@@ -1,29 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" data-ng-app="angle">
-
+<html lang="cn">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="{{app.description}}">
-    <meta name="keywords" content="app, responsive, angular, bootstrap, dashboard, admin">
-    <title data-ng-bind="::pageTitle()">测试系统</title>
-    <link rel="stylesheet" href="http://localhost:9090/src/main/webapp/app/css/bootstrap.css" data-ng-if="!app.layout.isRTL">
-    <link rel="stylesheet" href="http://localhost:9090/src/main/webapp/app/css/app.css" data-ng-if="!app.layout.isRTL">
-##    <link rel="stylesheet" href="/app/css/bootstrap.css" data-ng-if="!app.layout.isRTL">
-##    <link rel="stylesheet" href="/app/css/app.css" data-ng-if="!app.layout.isRTL">
-    <link rel="stylesheet" ng-href="{{app.layout.theme}}" data-ng-if="app.layout.theme">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>挚友传媒</title>
+    <meta name="description" content="挚友  挚友传媒 传媒 四川挚友传媒有限公司">
+    <meta name="title" content="挚友传媒官方网站">
+
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+
+    <link rel="shortcut icon" href="./img/logo.png"/>
 </head>
+<!--<canvas style="position: absolute;z-index: -1;width: 100%;"></canvas>-->
+<body>
 
-<body data-ng-class="{ 'layout-fixed' : app.layout.isFixed, 'aside-collapsed' : app.layout.isCollapsed, 'layout-boxed' : app.layout.isBoxed, 'layout-fs': app.useFullLayout, 'hidden-footer': app.hiddenFooter, 'layout-h': app.layout.horizontal, 'aside-float': app.layout.isFloat, 'offsidebar-open': app.offsidebarOpen, 'aside-toggled': app.asideToggled}">
-<div data-preloader></div>
-<div data-ui-view="" data-autoscroll="false" class="wrapper" style="height: 100%;"></div>
-<script src="http://localhost:9090/src/main/webapp/app/js/base.js"></script>
-<script src="http://localhost:9090/src/main/webapp/app/js/app.js"></script>
-<script src="http://localhost:9090/src/main/webapp/app/pages/templateCache.js"></script>
+<!--顶部的菜单栏-->
+<!--opacity 0.6-->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#menu" style="margin-top:24px;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="padding-left:10px;">
+                <img src="./img/header3.png" alt="挚友传媒" height="50px"/>
+            </a>
+        </div>
 
-##<script src="/app/js/base.js"></script>
-##<script src="/app/js/app.js"></script>
-##<script src="/app/pages/templateCache.js"></script>
-<!-- version:$version -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu" style="position:absolute;right:0;background: #FFF;">
+            <ul class="nav navbar-nav" style="padding-top:30px;">
+                <li><a href="/index.html" style="color:#477b39;">首页</a></li>
+                <li><a href="/about.html">关于我们</a></li>
+                <li><a href="/movie-list.html">电影</a></li>
+                <li><a href="/movie-list1.html">电视剧</a></li>
+                <li><a href="/movie-list2.html">影视发行</a></li>
+                <li><a href="/star-list.html">艺人经纪</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</div>
+
+<!--中间的轮播栏-->
+<div class="container-fluid" style="margin-top:80px;">
+    <div class="row">
+        <header id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="/movie-list.html">
+                        <img class="img-responsive"
+                             src="http://www.jqpictures.com/uploads/image/20160905/1473073853.jpg"/>
+                    </a>
+
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="/movie-list.html">
+                        <img class="img-responsive"
+                             src="http://www.jqpictures.com/uploads/image/20160324/1458814620.jpg"/>
+                    </a>
+
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="/movie-list.html">
+                        <img class="img-responsive hidden-xs"
+                             src="http://www.jqpictures.com/uploads/image/20160321/1458530017.jpg"/>
+                        <img class="img-responsive visible-xs"
+                             src="http://visualsoldiers.com/img/work/fitradio/fitradio-featured-mobile.jpg"
+                             alt="Fit Radio">
+                    </a>
+
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+        </header>
+    </div>
+</div>
+
+<!--首页推荐-->
+<div class="container-fluid">
+    <div class="row full">
+        <div class="col-md-6">
+            <figure class="effect-zoe">
+                <img src="http://visualsoldiers.com/img/work/plixis/plixis-home.jpg" alt="Plixis Screens"/>
+                <figcaption>
+                    <h3>挚友资讯</h3>
+                    <p>窦靖童首次献唱电影主题曲</p>
+                    <a href="/single-news.html">查看更多</a>
+                </figcaption>
+            </figure>
+        </div><!--End Col 6-->
+
+        <div class="col-md-6">
+            <div class="col-md-12">
+                <figure class="effect-zoe">
+                    <img class="img-responsive" src="http://visualsoldiers.com/img/work/aurrion/aurrion-1.jpg"
+                         alt="Aurrion">
+                    <figcaption>
+                        <h3>挚友资讯</h3>
+
+                        <p>斑马斑马大卖</p>
+                        <a href="/single-news.html">查看更多</a>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="col-md-12">
+                <figure class="effect-zoe">
+                    <img class="img-responsive"
+                         src="http://visualsoldiers.com/img/work/collection-of-prints/prints-main.jpg"
+                         alt="Richman KCM">
+                    <figcaption>
+                        <h3>剧本投递</h3>
+
+                        <p>我们期待你最好的创意!</p>
+                        <a href="/single-news.html">查看更多</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div><!--End Col 6-->
+    </div><!--End Row-->
+</div>
+
+<!--回到顶端-->
+
+<!--页脚-->
+<div class="container-fluid" style="margin-top:20px;">
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <ul class="list-inline">
+                <li>
+                    <img src="img/wechat.png">
+                </li>
+                <li>
+                    <img src="img/weibo.png">
+                </li>
+                <li>
+                    <img src="img/douban.png">
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-12 text-center">
+            <ul class="list-inline">
+                <span>高新区中海国际大厦,电话:13098765432</span>
+                <span>蓉123备</span>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="http://o9vd16zc6.bkt.clouddn.com/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://o9vd16zc6.bkt.clouddn.com/bootstrap.min.js"></script>
+
+
+<script>
+    $('.carousel').carousel({
+        interval: 4000 //changes the speed
+    })
+</script>
+
 </body>
 </html>

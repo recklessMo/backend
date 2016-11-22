@@ -33,7 +33,7 @@ public class FtpUploadService {
         return ftpClient;
     }
 
-    public void updatFileByFtp(String directory, String content, String fileName)throws Exception{
+    public void uploadFileByFtp(String directory, String content, String fileName)throws Exception{
         InputStream fis = null;
         FTPClient ftpClient = null;
         try{
@@ -53,7 +53,7 @@ public class FtpUploadService {
         }
     }
 
-    public void updatInputStreamByFtp(String directory, InputStream is, String fileName)throws Exception{
+    public void uploadInputStreamByFtp(String directory, InputStream is, String fileName)throws Exception{
         InputStream fis = is;
         FTPClient ftpClient = null;
         try{
@@ -73,12 +73,6 @@ public class FtpUploadService {
     }
 
     public static void main(String[] args) {
-        FtpUploadService ftpUploadService = new FtpUploadService();
-        try {
-            ftpUploadService.updatFileByFtp("/www", "aaa你好", "测试.txt");
-        }catch (Exception e){
-            e.printStackTrace();
-        }
     }
 
 }

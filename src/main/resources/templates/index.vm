@@ -61,7 +61,7 @@
                 <div class="item active">
                     <a href="/movie-list.html">
                         <img class="img-responsive"
-                             src="http://www.jqpictures.com/uploads/image/20160905/1473073853.jpg"/>
+                             src="$data.img1"/>
                     </a>
 
                     <div class="carousel-caption">
@@ -70,7 +70,7 @@
                 <div class="item">
                     <a href="/movie-list.html">
                         <img class="img-responsive"
-                             src="http://www.jqpictures.com/uploads/image/20160324/1458814620.jpg"/>
+                             src="$data.img2"/>
                     </a>
 
                     <div class="carousel-caption">
@@ -78,11 +78,8 @@
                 </div>
                 <div class="item">
                     <a href="/movie-list.html">
-                        <img class="img-responsive hidden-xs"
-                             src="http://www.jqpictures.com/uploads/image/20160321/1458530017.jpg"/>
-                        <img class="img-responsive visible-xs"
-                             src="http://visualsoldiers.com/img/work/fitradio/fitradio-featured-mobile.jpg"
-                             alt="Fit Radio">
+                        <img class="img-responsive"
+                             src="$data.img3"/>
                     </a>
 
                     <div class="carousel-caption">
@@ -109,7 +106,7 @@
                 <figcaption>
                     <h3>挚友资讯</h3>
                     <p>窦靖童首次献唱电影主题曲</p>
-                    <a href="/single-news.html">查看更多</a>
+                    <a href="/single-news.html"></a>
                 </figcaption>
             </figure>
         </div><!--End Col 6-->
@@ -120,10 +117,10 @@
                     <img class="img-responsive" src="http://visualsoldiers.com/img/work/aurrion/aurrion-1.jpg"
                          alt="Aurrion">
                     <figcaption>
-                        <h3>挚友资讯</h3>
+                        <h3>剧本投递</h3>
 
-                        <p>斑马斑马大卖</p>
-                        <a href="/single-news.html">查看更多</a>
+                        <p>我们期待你最好的创意!</p>
+                        <a href="/single-news.html"></a>
                     </figcaption>
                 </figure>
             </div>
@@ -134,10 +131,10 @@
                          src="http://visualsoldiers.com/img/work/collection-of-prints/prints-main.jpg"
                          alt="Richman KCM">
                     <figcaption>
-                        <h3>剧本投递</h3>
+                        <h3>挚友资讯</h3>
 
-                        <p>我们期待你最好的创意!</p>
-                        <a href="/single-news.html">查看更多</a>
+                        <p>斑马斑马大卖</p>
+                        <a href="/single-news.html"></a>
                     </figcaption>
                 </figure>
             </div>
@@ -148,9 +145,15 @@
 <!--回到顶端-->
 
 <!--页脚-->
-<div class="container-fluid" style="margin-top:20px;">
-    <div class="row">
-        <div class="col-sm-12 text-center">
+<div class="container-fluid">
+    <div class="row full" style="background: lightgray;padding-top:20px;">
+        <div class="col-md-6 text-center">
+            <ul class="list-inline">
+                <span>高新区中海国际大厦,电话:13098765432</span>
+                <span>蓉123备</span>
+            </ul>
+        </div>
+        <div class="col-md-6 text-center">
             <ul class="list-inline">
                 <li>
                     <img src="img/wechat.png">
@@ -161,12 +164,6 @@
                 <li>
                     <img src="img/douban.png">
                 </li>
-            </ul>
-        </div>
-        <div class="col-sm-12 text-center">
-            <ul class="list-inline">
-                <span>高新区中海国际大厦,电话:13098765432</span>
-                <span>蓉123备</span>
             </ul>
         </div>
     </div>
@@ -180,7 +177,7 @@
 
 <script>
     $('.carousel').carousel({
-        interval: 4000 //changes the speed
+        interval: 3000 //changes the speed
     })
 </script>
 

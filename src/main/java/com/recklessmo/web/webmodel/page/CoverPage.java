@@ -6,16 +6,70 @@ package com.recklessmo.web.webmodel.page;
 public class CoverPage {
 
     private String img1;
+    private String img1Href;
     private String img2;
+    private String img2Href;
     private String img3;
+    private String img3Href;
 
     private String imgLeftBottom;
     private String textLeftBottom;
+    private String hrefLeftBottom;
     private String imgRightMiddle;
     private String textRightMiddle;
+    private String hrefRightMiddle;
     private String imgRightBottom;
     private String textRightBottom;
+    private String hrefRightBottom;
 
+
+    public String getImg1Href() {
+        return img1Href;
+    }
+
+    public void setImg1Href(String img1Href) {
+        this.img1Href = img1Href;
+    }
+
+    public String getImg2Href() {
+        return img2Href;
+    }
+
+    public void setImg2Href(String img2Href) {
+        this.img2Href = img2Href;
+    }
+
+    public String getImg3Href() {
+        return img3Href;
+    }
+
+    public void setImg3Href(String img3Href) {
+        this.img3Href = img3Href;
+    }
+
+    public String getHrefLeftBottom() {
+        return hrefLeftBottom;
+    }
+
+    public void setHrefLeftBottom(String hrefLeftBottom) {
+        this.hrefLeftBottom = hrefLeftBottom;
+    }
+
+    public String getHrefRightMiddle() {
+        return hrefRightMiddle;
+    }
+
+    public void setHrefRightMiddle(String hrefRightMiddle) {
+        this.hrefRightMiddle = hrefRightMiddle;
+    }
+
+    public String getHrefRightBottom() {
+        return hrefRightBottom;
+    }
+
+    public void setHrefRightBottom(String hrefRightBottom) {
+        this.hrefRightBottom = hrefRightBottom;
+    }
 
     public String getImg1() {
         return img1;

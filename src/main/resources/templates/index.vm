@@ -145,30 +145,31 @@
 
 <!--页脚-->
 <div class="container-fluid">
-    <div class="row" style="background: rgb(179, 185, 187);padding-top:20px;border-top:solid 7px #20211e;padding-bottom: 30px;">
+    <div class="row" style="background: rgb(214, 217, 218);padding-top:20px;padding-bottom: 30px;">
         <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);">
             <div style="margin-top:12px;">
                 <img src="./img/header3.png" alt="挚友传媒" height="50px"/>
             </div>
-            <div style="margin-top:20px;font-size:15px;font-weight: bold;">
-                <i class="fa fa-map-marker"></i> 成都公司：成都市环球中心W5区7栋
+            <div style="margin-top:20px;font-size:12px;">
+                <i class="fa fa-map-marker" style="margin-left:-18px;"></i> 成都公司：成都市环球中心W5区7栋
             </div>
-            <div style="margin-top:5px;font-size:15px;font-weight: bold;">
+            <div style="margin-top:5px;font-size:12px;">
                 <i class="fa fa-map-marker"></i> 北京公司：北京东亿国际传媒C1座3-4层
             </div>
         </div>
         <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);">
-            <div style="margin-top:20px;font-size:25px; font-weight: bold;">
+            <div style="margin-top:20px;font-size:15px;">
                 <i class="fa fa-phone"></i>  028-83395121
             </div>
-            <div style="margin-top: 30px;font-size:15px;font-weight: bold;">
-                <a style="color:black;" href="http://www.miitbeian.gov.cn/">蜀ICP备16025683号</a><br/> Copyright © 2016 zhiyouchuanmei All Rights Reserved
+            <div style="margin-top: 37px;font-size:12px;">
+                <div><a style="color:black;" href="http://www.miitbeian.gov.cn/">蜀ICP备16025683号</a></div>
+                <div style="margin-top:5px;">Copyright © 2016 zhiyouchuanmei All Rights Reserved</div>
             </div>
         </div>
-        <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);padding-left:50px;">
-            <div style="margin-top: 20px;font-size:15px;font-weight: bold;">
+        <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);padding-left:80px;">
+            <div style="margin-top: 20px;font-size:12px;">
                 <img style="float:left;" src="./img/wecode.jpeg" width="100px"/>
-                <div style="float:left;padding-left:20px;margin-top:30px;">
+                <div style="float:left;padding-left:20px;margin-top:50px;">
                     扫一扫关注挚友传媒<br/>
                     获取更多挚友传媒资讯
                 </div>

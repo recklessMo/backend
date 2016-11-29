@@ -40,9 +40,19 @@ public class AboutPage {
     private String firstImg;
     private String companyIntro;
     private List<People> leaderPicList;
+    private List<People> teamPicList;
     private String companyCulture;
     private String corpText;
     private String resumePost;
+
+
+    public List<People> getTeamPicList() {
+        return teamPicList;
+    }
+
+    public void setTeamPicList(List<People> teamPicList) {
+        this.teamPicList = teamPicList;
+    }
 
     public String getFirstImg() {
         return firstImg;

@@ -17,6 +17,7 @@
             if(angular.isUndefined($scope.obj.firstImg)
                 || angular.isUndefined($scope.obj.companyIntro)
                 || angular.isUndefined($scope.obj.leaderPicList)
+                || angular.isUndefined($scope.obj.teamPicList)
                 || angular.isUndefined($scope.obj.companyCulture)
                 || angular.isUndefined($scope.obj.corpText)
                 || angular.isUndefined($scope.obj.resumePost)
@@ -53,16 +54,6 @@
                 var url = data.value.url;
                 if(type === 1){
                     $scope.obj.firstImg = url;
-                }else if(type === 2){
-                    $scope.obj.secondHeadImg = url;
-                }else if(type === 3){
-                    $scope.obj.thirdHeadImg = url;
-                }else if(type == 4){
-                    $scope.obj.leftImg = url;
-                }else if(type == 5){
-                    $scope.obj.rightMiddleImg = url;
-                }else if(type == 6){
-                    $scope.obj.rightBottomImg = url;
                 }
             });
         }
@@ -89,15 +80,22 @@
 
         //团队照片
         $scope.teamPicTableParams = new NgTableParams({}, {
-
+            counts:[],
+            getData: function($defer, params){
+                if(!$scope.obj.teamPicList){
+                    $scope.obj.teamPicList = [];
+                }
+                $defer.resolve($scope.obj.teamPicList);
+            }
         });
 
         $scope.addTeamPicItem = function(data){
-
+            $scope.obj.teamPicList.push(data);
         }
 
-        $scope.deleteTeamPicItem = function(data){
-
+        $scope.deleteTeamPicItem = function(row){
+            $scope.obj.teamPicList = _.without($scope.obj.teamPicList , row);
+            $scope.teamPicTableParams.reload();
         }
 
         //在img里面进行设置

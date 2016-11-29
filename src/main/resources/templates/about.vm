@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>挚友传媒</title>
+    <meta name="description" content="挚友  挚友传媒 传媒 四川挚友传媒有限公司">
+    <meta name="title" content="挚友传媒官方网站">
+    <!--<link rel="stylesheet" type="text/css" href="./css/styles.css"/>-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <link rel="shortcut icon" href="./img/logo.png"/>
+    <link href="./css/uploadfile.css" rel="stylesheet">
+    <link href="./css/uploadfile.custom.css" rel="stylesheet">
+    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+<!--<canvas style="position: absolute;z-index: -1;width: 100%;"></canvas>-->
+<body>
+
+<!--顶部的菜单栏-->
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#menu" style="margin-top:24px;">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="padding-left:10px;">
+                <img src="./img/header3.png" alt="挚友传媒" height="50px"/>
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="menu" style="position:absolute;right:0;background: #FFF;">
+            <ul class="nav navbar-nav" style="padding-top:30px;">
+                <li><a href="/index.html">首页</a></li>
+                <li><a href="/about.html" style="color:#477b39;">关于我们</a></li>
+                <li><a href="/movie-list.html">电影</a></li>
+                <li><a href="/movie-list1.html">电视剧</a></li>
+                <li><a href="/movie-list2.html">影视发行</a></li>
+                <li><a href="/star-list.html">艺人经纪</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</div>
+
+<!--中间的轮播栏-->
+<div class="container-fluid" style="margin-top:80px;">
+    <div class="row">
+        <header id="myCarousel" class="carousel slide">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <a href="/movie-list.html">
+                        <img class="img-responsive" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1479277634&di=1bc1d16bb797e3ef53e34fabb098b29b&src=http://p2.cri.cn/M00/1A/EB/CqgNOlZO3ayACWOAAAAAAAAAAAA751.5299x2325.jpg" width="100%" height="auto"/>
+                    </a>
+
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+                <div class="item">
+                    <a href="/movie-list.html">
+                        <img class="img-responsive" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1479277634&di=1bc1d16bb797e3ef53e34fabb098b29b&src=http://p2.cri.cn/M00/1A/EB/CqgNOlZO3ayACWOAAAAAAAAAAAA751.5299x2325.jpg" width="100%" height="auto"/>
+                    </a>
+
+                    <div class="carousel-caption">
+                    </div>
+                </div>
+            </div>
+            <!-- Controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="icon-prev"></span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="icon-next"></span>
+            </a>
+        </header>
+    </div>
+</div>
+
+<!--正文-->
+<div class="container-fluid">
+    <div class="row full">
+        <div class="col-md-12" style="background: #f2f2f2;padding-bottom:30px;">
+            <!--<div class="page-cover">-->
+                <!--<img src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1479277634&di=1bc1d16bb797e3ef53e34fabb098b29b&src=http://p2.cri.cn/M00/1A/EB/CqgNOlZO3ayACWOAAAAAAAAAAAA751.5299x2325.jpg" width="100%" height="auto"/>-->
+            <!--</div>-->
+            <div class="page-cover">
+                <h1>about us</h1>
+            </div>
+            <div class="page-cover-content">
+                <h2 class="about-content">四川挚友文化传播有限公司是一家拥有业内资深专业团队、丰富运营经验及成功案例的影业公司。<br>业务板块主要包括影视制作、影视投资、宣传发行、VR影视内容制作、艺人经纪等</h2>
+            </div>
+            <div class="content-block">
+                <div class="sub-title">
+                    <span>
+                        <h3 class="colorgrey">领导班子</h3>
+                    </span>
+                </div>
+                <div class="people-list">
+                    <div class="people-block1">
+                        <div class="people-block-img" style="background-image: url(http://placehold.it/320x320)">
+                            <div class="people-block-img-two people-block-img-over"></div>
+                        </div>
+                        <h4>
+                            希拉里
+                        </h4>
+                        <p>
+                            国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                        </p>
+                    </div>
+                    <div class="people-block1">
+                        <div class="people-block-img" style="background-image: url(http://www.andpeople.com/wp-content/uploads/2014/03/ANPEOPLE_WEB_TEAM-PORTRAITS_ANDI1.jpg)">
+                            <div class="people-block-img-two people-block-img-over"></div>
+                        </div>
+                        <h4>
+                            刘德华
+                        </h4>
+                        <p>
+                            国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                        </p>
+                    </div>
+                    <div class="people-block1">
+                        <div class="people-block-img" style="background-image: url(http://www.andpeople.com/wp-content/uploads/2014/03/ANPEOPLE_WEB_TEAM-PORTRAITS_ANDI1.jpg)">
+                            <div class="people-block-img-two people-block-img-over"></div>
+                        </div>
+                        <h4>
+                            刘德华
+                        </h4>
+                        <p>
+                            国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                        </p>
+                    </div>
+                    <div class="people-block1">
+                        <div class="people-block-img" style="background-image: url(http://www.andpeople.com/wp-content/uploads/2014/03/ANPEOPLE_WEB_TEAM-PORTRAITS_ANDI1.jpg)">
+                            <div class="people-block-img-two people-block-img-over"></div>
+                        </div>
+                        <h4>
+                            刘德华
+                        </h4>
+                        <p>
+                            国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="sub-title">
+                    <span>
+                        <h3 class="colorgrey">我们的团队</h3>
+                    </span>
+                </div>
+                <div class="people-list">
+                    <div class="people-block" style="width: 100%">
+                        <img class="img-responsive" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1479277634&di=1bc1d16bb797e3ef53e34fabb098b29b&src=http://p2.cri.cn/M00/1A/EB/CqgNOlZO3ayACWOAAAAAAAAAAAA751.5299x2325.jpg" width="100%" height="auto"/>
+                        <h4>
+                            希拉里
+                        </h4>
+                        <p>
+                            国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                        </p>
+                    </div>
+                    <div class="people-block" style="width: 100%;margin-top:80px;">
+                        <img class="img-responsive" src="https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1479277634&di=1bc1d16bb797e3ef53e34fabb098b29b&src=http://p2.cri.cn/M00/1A/EB/CqgNOlZO3ayACWOAAAAAAAAAAAA751.5299x2325.jpg" width="100%" height="auto"/>
+                        <h4>
+                            刘德华
+                        </h4>
+                        <p>
+                            国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="content-block">
+                <div class="sub-title">
+                    <span>
+                        <h3 class="colorgrey">企业文化</h3>
+                    </span>
+                </div>
+                <p style="font-size: 16px;">
+                    公司旨在成为国际知名、国内一流的影视娱乐梦工场，国内领先的VR影视技术及内容提供商、国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                    公司旨在成为国际知名、国内一流的影视娱乐梦工场，国内领先的VR影视技术及内容提供商、国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                </p>
+            </div>
+            <div class="content-block">
+                <div class="sub-title">
+                    <span>
+                        <h3 class="colorgrey">项目合作</h3>
+                    </span>
+                </div>
+                <p style="font-size: 16px;">
+                    公司旨在成为国际知名、国内一流的影视娱乐梦工场，国内领先的VR影视技术及内容提供商、国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                    公司旨在成为国际知名、国内一流的影视娱乐梦工场，国内领先的VR影视技术及内容提供商、国内超前超强的内容IP储备及开发企业、影视作品营销发行企业、细分类型影视作品投资制作龙头企业。
+                </p>
+            </div>
+            <div class="contact-form">
+                <div class="sub-title">
+                    <span>
+                        <h3 class="colorgrey">加入我们</h3>
+                    </span>
+                </div>
+                <p style="font-size: 16px;">
+                    请发送简历到xxx@xxx.com
+                </p>
+                <!--<div class="form-text">姓名</div>-->
+                <!--<div class="form-input">-->
+                    <!--<input type="text" size="30" name="name"/>-->
+                <!--</div>-->
+                <!--<div class="form-text">电话</div>-->
+                <!--<div class="form-input">-->
+                    <!--<input type="number" size="30" name="phone"/>-->
+                <!--</div>-->
+                <!--<div class="form-text">邮箱</div>-->
+                <!--<div class="form-input">-->
+                    <!--<input type="text" size="30" name="email"/>-->
+                <!--</div>-->
+                <!--<div class="form-text">简历</div>-->
+                <!--<div id="fileuploader">Upload</div>-->
+                <!--<div class="form-submit">-->
+                    <!--<input type="submit" value="提交"/>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--页脚-->
+<div class="container-fluid">
+    <div class="row" style="background: rgb(214, 217, 218);padding-top:20px;padding-bottom: 30px;">
+        <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);">
+            <div style="margin-top:12px;">
+                <img src="./img/header3.png" alt="挚友传媒" height="50px"/>
+            </div>
+            <div style="margin-top:20px;font-size:12px;">
+                <i class="fa fa-map-marker" style="margin-left:-18px;"></i> 成都公司：成都市环球中心W5区7栋
+            </div>
+            <div style="margin-top:5px;font-size:12px;">
+                <i class="fa fa-map-marker"></i> 北京公司：北京东亿国际传媒C1座3-4层
+            </div>
+        </div>
+        <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);">
+            <div style="margin-top:20px;font-size:15px;">
+                <i class="fa fa-phone"></i>  028-83395121
+            </div>
+            <div style="margin-top: 37px;font-size:12px;">
+                <div><a style="color:black;" href="http://www.miitbeian.gov.cn/">蜀ICP备16025683号</a></div>
+                <div style="margin-top:5px;">Copyright © 2016 zhiyouchuanmei All Rights Reserved</div>
+            </div>
+        </div>
+        <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);padding-left:50px;">
+            <div style="margin-top: 20px;font-size:12px;">
+                <img style="float:left;" src="./img/wecode.jpeg" width="100px"/>
+                <div style="float:left;padding-left:20px;margin-top:50px;">
+                    扫一扫关注挚友传媒<br/>
+                    获取更多挚友传媒资讯
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script src="http://o9vd16zc6.bkt.clouddn.com/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="http://o9vd16zc6.bkt.clouddn.com/bootstrap.min.js"></script>
+<script src="./js/jquery.uploadfile.min.js"></script>
+<script>
+//    var result;
+//    $("#fileuploader").uploadFile({
+//        url:"/php/upload.php",
+//        multiple:false,
+//        dragDrop:false,
+//        maxFileCount:1,
+//        fileName:"myfile",
+//        uploadStr:"点击上传简历附件",
+//        dragDropStr:"拖拽文件至此",
+//        cancelStr:"删除",
+//        maxFileCountErrorStr:"不能上传, 最大允许上传文件数目为",
+//        autoSubmit: true,
+//        onSuccess:function(files,data,xhr,pd){
+//            result = data;
+//            alert(result);
+//        }
+//    });
+
+//    准备上传, 调用后台进行上传简历的snapshot保存
+
+</script>
+<script>
+    $('.carousel').carousel({
+        interval: 3000 //changes the speed
+    })
+</script>
+
+</body>
+</html>

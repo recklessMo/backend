@@ -9,8 +9,27 @@ public class Frame {
 
     private long id;
     private String name;
-    private Date created;
-    private int deleted;
+    private String type;
+    private String url;
+    private String content;
+    private Date time;
+    private int status;
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public long getId() {
         return id;
@@ -28,19 +47,27 @@ public class Frame {
         this.name = name;
     }
 
-    public Date getCreated() {
-        return created;
+    public String getContent() {
+        return content;
     }
 
-    public void setCreated(Date created) {
-        this.created = created;
+    public void setContent(String content) {
+        this.content = content;
     }
 
-    public int getDeleted() {
-        return deleted;
+    public Date getTime() {
+        return time;
     }
 
-    public void setDeleted(int deleted) {
-        this.deleted = deleted;
+    public void setTime(Date time) {
+        this.time = time;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

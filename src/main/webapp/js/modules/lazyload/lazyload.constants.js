@@ -153,7 +153,12 @@
                                                         'vendor/angular-bootstrap-colorpicker/js/bootstrap-colorpicker-module.js']},
             {name: 'blockUI',                   files: ['vendor/angular-block-ui/dist/angular-block-ui.min.js',
                                                         'vendor/angular-block-ui/dist/angular-block-ui.min.css']},
-            {name: 'ngSort',                   files: ['vendor/angular-ui-sortable/sortable.min.js']}
+            {name: 'ngSort',                   files: ['vendor/angular-ui-sortable/sortable.min.js']},
+              {
+                  name: 'angucomplete-alt',
+                  files: ['/vendor/angucomplete-alt/angucomplete-alt.css',
+                      '/vendor/angucomplete-alt/angucomplete-alt.js']
+              }
           ]
         })
         ;

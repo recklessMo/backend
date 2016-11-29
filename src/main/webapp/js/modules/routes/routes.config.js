@@ -43,10 +43,11 @@
             templateUrl: helper.basepath('custom/admin/img/img-list.html'),
             resolve: helper.resolveFor('angularFileUpload', 'filestyle')
         })
-        .state('app.cover', {
+        .state('app.frame', {
             url: '/cover',
-            title: '首页',
-            templateUrl: helper.basepath('custom/frame/cover.html')
+            title: '页面管理',
+            templateUrl: helper.basepath('custom/frame/frame-list.html'),
+            resolve: helper.resolveFor('angucomplete-alt')
         })
         .state('page', {
             url: '/page',

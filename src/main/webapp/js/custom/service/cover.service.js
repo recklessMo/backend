@@ -8,11 +8,20 @@
     CoverService.$inject = ['$http'];
     function CoverService($http) {
 
-        this.publish = function(obj) {
+        this.publishCover = function (obj) {
             return $http({
                 method: "POST",
-                url : "/v1/cover/publish",
-                data:obj,
+                url: "/v1/cover/publish/index",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishAbout = function (obj) {
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/about",
+                data: obj,
                 timeout: 5000
             });
         }

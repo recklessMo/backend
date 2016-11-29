@@ -1,39 +1,149 @@
-<div ng-controller="AccountController as account" style="background: #fff;overflow: auto;height:100%;padding: 15px;border: 1px solid #cfdbe2;">
+<div ng-controller="CoverController as cover"
+     style="background: #fff;overflow: auto;height:100%;padding: 15px;border: 1px solid #cfdbe2;">
     <div class="row">
-        <!--<div class="col-md-3 pull-left">-->
-            <!--<button class="btn btn-info" ng-click="add(-1)">-->
-                <!--添加-->
-            <!--</button>-->
-        <!--</div>-->
+        <div class="col-md-12">
+            <div class="col-md-1" style="margin-top:6px;">
+                第一张头图
+            </div>
+            <div class="col-md-4">
+                <input ng-model="obj.firstHeadImg" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchImg(1)">修改</button>
+            </div>
 
-        <!--<div class="col-md-7 pull-right">-->
-            <!--<div class="pull-right">-->
-                <!--<button class="btn btn-info" ng-click="activate()">-->
-                    <!--查询-->
-                <!--</button>-->
-            <!--</div>-->
-            <!--<div class="form-group pull-right" style="width:280px;padding-right: 20px;">-->
-                <!--<input type="text"-->
-                       <!--ng-model="tableParams.searchStr"-->
-                       <!--placeholder="输入登录名,姓名或者电话进行查找"-->
-                       <!--class="form-control"/>-->
-            <!--</div>-->
-        <!--</div>-->
+            <div class="col-md-1" style="margin-top:6px;">
+                跳转页面
+            </div>
+            <div class="col-md-4">
+                <input ng-model="obj.firstHeadHref" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchPage(1)">修改</button>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:20px;">
+            <div class="col-md-1" style="margin-top:6px;">
+                第二张头图
+            </div>
+            <div class="col-md-4">
+                <input ng-model="obj.secondHeadImg" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchImg(2)">修改</button>
+            </div>
+
+            <div class="col-md-1" style="margin-top:6px;">
+                跳转页面
+            </div>
+            <div class="col-md-4">
+                <input ng-model="obj.secondHeadHref" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchPage(2)">修改</button>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:20px;">
+            <div class="col-md-1" style="margin-top:6px;">
+                第三张头图
+            </div>
+            <div class="col-md-4">
+                <input ng-model="obj.thirdHeadImg" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchImg(3)">修改</button>
+            </div>
+
+            <div class="col-md-1" style="margin-top:6px;">
+                跳转页面
+            </div>
+            <div class="col-md-4">
+                <input ng-model="obj.thirdHeadHref" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchPage(3)">修改</button>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:40px;">
+            <div class="col-md-1" style="margin-top:6px;">
+                左下角图片
+            </div>
+            <div class="col-md-3">
+                <input ng-model="obj.leftImg" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchImg(4)">修改</button>
+            </div>
+            <div class="col-md-1" style="margin-top:6px;">
+                跳转页面
+            </div>
+            <div class="col-md-3">
+                <input ng-model="obj.leftHref" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchPage(4)">修改</button>
+            </div>
+            <div class="col-md-2">
+                <input ng-model="obj.leftText" placeholder="填写文案" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:20px;">
+            <div class="col-md-1" style="margin-top:6px;">
+                右中图片
+            </div>
+            <div class="col-md-3">
+                <input ng-model="obj.rightMiddleImg" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchImg(5)">修改</button>
+            </div>
+            <div class="col-md-1" style="margin-top:6px;">
+                跳转页面
+            </div>
+            <div class="col-md-3">
+                <input ng-model="obj.rightMiddleHref" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchPage(5)">修改</button>
+            </div>
+            <div class="col-md-2">
+                <input ng-model="obj.rightMiddleText" placeholder="填写文案" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="col-md-12" style="margin-top:20px;">
+            <div class="col-md-1" style="margin-top:6px;">
+                右下图片
+            </div>
+            <div class="col-md-3">
+                <input ng-model="obj.rightBottomImg" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchImg(6)">修改</button>
+            </div>
+            <div class="col-md-1" style="margin-top:6px;">
+                跳转页面
+            </div>
+            <div class="col-md-3">
+                <input ng-model="obj.rightBottomHref" class="form-control" disabled="1"/>
+            </div>
+            <div class="col-md-1">
+                <button class="btn btn-info" ng-click="searchPage(6)">修改</button>
+            </div>
+            <div class="col-md-2">
+                <input ng-model="obj.rightBottomText" placeholder="填写文案" class="form-control"/>
+            </div>
+        </div>
+
+        <div class="col-md-12 text-center" style="margin-top:20px;">
+            <button class="btn btn-info" ng-click="publish()">发布</button>
+            <button class="btn btn-danger" ng-click="closeThisDialog({})" style="margin-left:20px;">取消</button>
+        </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-1">
-            第一张头图
-        </div>
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-2">
-
-        </div>
-    </div>
 
 </div>

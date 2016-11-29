@@ -1,8 +1,8 @@
-<div ng-controller="ImageListController as account" style="background: #fff;overflow: auto;height:100%;padding: 15px;border: 1px solid #cfdbe2;">
+<div ng-controller="FrameListController" style="background: #fff;overflow: auto;height:100%;padding: 15px;border: 1px solid #cfdbe2;">
     <div class="row">
         <div class="col-md-3 pull-left">
             <button class="btn btn-info" ng-click="add(-1)">
-                添加
+                添加新页面
             </button>
         </div>
 
@@ -22,14 +22,15 @@
     </div>
 
     <div style="margin-top: 10px;">
-        <table ng-table="imgTableParams" class="table table-bordered table-hover table-condensed editable-table table-min">
+        <table ng-table="frameTableParams" class="table table-bordered table-hover table-condensed editable-table table-min">
             <tr ng-repeat="item in $data" ng-dblclick="show(item.id)">
-                <td data-title="'标记'" style="text-align: center">{{item.name}}</td>
-                <td data-title="'文件名'" style="text-align: center">{{item.fileName}}</td>
+                <td data-title="'序号'" style="text-align: center">{{item.id}}</td>
+                <td data-title="'名称'" style="text-align: center">{{item.name}}</td>
                 <td data-title="'上传时间'" style="text-align: center">{{item.time | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
                 <td data-title="'操作'" style="text-align: center">
                     <button class="btn btn-info" ng-click="choose(item)" ng-if="inDialog">选择</button>
-                    <button class="btn btn-danger" ng-click="delete(item.id)">删除</button>
+                    <button class="btn btn-info" ng-click="edit(item)" ng-if="!inDialog">修改</button>
+                    <button class="btn btn-danger" ng-click="delete(item.id)" ng-if="item.status!=0 && !inDialog">删除</button>
                 </td>
             </tr>
         </table>

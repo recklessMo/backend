@@ -1,8 +1,12 @@
 package com.recklessmo.web.biz;
 
+import com.alibaba.fastjson.JSONObject;
+import com.recklessmo.model.Page.Frame;
 import com.recklessmo.response.JsonResponse;
+import com.recklessmo.service.biz.FrameService;
 import com.recklessmo.service.ftp.FtpUploadService;
 import com.recklessmo.service.template.TemplateService;
+import com.recklessmo.web.webmodel.page.AboutPage;
 import com.recklessmo.web.webmodel.page.CoverPage;
 import org.apache.velocity.VelocityContext;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -18,28 +22,46 @@ import javax.annotation.Resource;
  * Created by hpf on 11/11/16.
  */
 @Controller
-@RequestMapping("/v1/cover")
+@RequestMapping("/v1/cover/publish")
 public class CoverController {
 
     @Resource
     private TemplateService templateService;
     @Resource
     private FtpUploadService ftpUploadService;
+    @Resource
+    private FrameService frameService;
 
-    //设定图片地址, 跳转链接
     @PreAuthorize("hasAnyAuthority('login')")
-    @RequestMapping(value = "/publish", method = {RequestMethod.POST, RequestMethod.GET})
+    @RequestMapping(value = "/index", method = {RequestMethod.POST, RequestMethod.GET})
     @ResponseBody
-    public JsonResponse publish(@RequestBody CoverPage page){
-        CoverPage coverPage = new CoverPage();
+    public JsonResponse publishIndex(@RequestBody CoverPage page){
         VelocityContext context = new VelocityContext();
         try {
-            coverPage.setImg1("http://www.jqpictures.com/uploads/image/20160905/1473073853.jpg");
-            coverPage.setImg2("http://www.jqpictures.com/uploads/image/20160905/1473073853.jpg");
-            coverPage.setImg3("http://www.jqpictures.com/uploads/image/20160905/1473073853.jpg");
-            context.put("data", coverPage);
+            context.put("data", page);
+            Frame frame = frameService.getById(1);
+            frame.setContent(JSONObject.toJSONString(page));
+            frameService.updateContent(frame);
             String content = templateService.getTemplate(context, "/templates/index.vm");
             ftpUploadService.uploadFileByFtp("/www", content, "index.html");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/about", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishAbout(@RequestBody AboutPage page){
+        VelocityContext context = new VelocityContext();
+        try {
+            context.put("data", page);
+            Frame frame = frameService.getById(2);
+            frame.setContent(JSONObject.toJSONString(page));
+            frameService.updateContent(frame);
+            String content = templateService.getTemplate(context, "/templates/about.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, "about.html");
         }catch (Exception e){
             e.printStackTrace();
         }

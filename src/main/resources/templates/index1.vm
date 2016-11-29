@@ -9,8 +9,6 @@
 
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
-    <!-- Custom Fonts -->
-    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
     <link rel="shortcut icon" href="./img/logo.png"/>
 </head>
@@ -61,7 +59,7 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <a href="$data.firstHeadHref">
+                    <a href="$data.fristHeadHref">
                         <img class="img-responsive"
                              src="$data.firstHeadImg"/>
                     </a>
@@ -104,7 +102,7 @@
     <div class="row full">
         <div class="col-md-6">
             <figure class="effect-zoe">
-                <img src="$data.leftImg"/>
+                <img src="$data.leftImg" alt="Plixis Screens"/>
                 <figcaption>
                     <h3>挚友资讯</h3>
                     <p>$data.leftText</p>
@@ -129,11 +127,11 @@
             <div class="col-md-12">
                 <figure class="effect-zoe">
                     <img class="img-responsive"
-                         src="$data.rightBottomImg">
+                         src="$data.rightBottomImg"
                     <figcaption>
                         <h3>挚友资讯</h3>
                         <p>$data.rightBottomText</p>
-                        <a href="$data.rightBottomHref"></a>
+                        <a href="$scope.rightBottomHref"></a>
                     </figcaption>
                 </figure>
             </div>

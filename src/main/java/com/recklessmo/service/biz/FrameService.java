@@ -4,6 +4,7 @@ import com.recklessmo.dao.page.FrameDAO;
 import com.recklessmo.model.Page.Frame;
 import com.recklessmo.web.webmodel.page.Page;
 import jdk.nashorn.internal.ir.annotations.Reference;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -30,5 +31,16 @@ public class FrameService {
         return frameDAO.listFramesCount(page);
     }
 
+    public void updateContent(Frame frame){
+        frameDAO.updateContent(frame);
+    }
+
+    public void deleteFrame(long id){
+        frameDAO.deleteFrame(id);
+    }
+
+    public Frame getById(long id){
+        return frameDAO.getById(id);
+    }
 
 }

@@ -3,7 +3,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.recklessmo.dao.page.FrameDAO">
     <sql id="columns">
-        id, name, url, time
+        id, name, url, content, time, status, type
     </sql>
 
     <sql id="byPageQuery">
@@ -25,18 +25,30 @@
         </if>
     </select>
 
+    <select id="getById" resultType="com.recklessmo.model.Page.Frame">
+        select
+        <include refid="columns"/>
+        from frame
+        where id = #{id}
+        limit 1
+    </select>
+
     <select id="listFramesCount" resultType="java.lang.Integer">
         select count(1) from img
         <include refid="byPageQuery"/>
     </select>
 
     <insert id="addFrame" parameterType="com.recklessmo.model.Page.Frame">
-        insert into frame(name, url, time)
-        values(#{name}, #{url}, #{time})
+        insert into frame(name, url, content, time, status, type)
+        values(#{name}, #{url}, #{content}, #{time}, #{status}, #{type})
     </insert>
 
     <update id="deleteFrame">
         delete from frame where id = #{id} limit 1
+    </update>
+
+    <update id="updateContent">
+        update frame set content = #{content} where id = #{id}
     </update>
 
 </mapper>

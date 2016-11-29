@@ -9,17 +9,10 @@ package com.recklessmo.manage.menu;
 public class Menu{
 
     public static Menu[] menuList = {
-            new Menu(100, null, "首页", "icon-book-open", "app.cover"),
-            new Menu(200, null, "关于我们", "icon-book-open", "app.about"),
-            new Menu(300, null, "电影", "icon-book-open", "app.film"),
-            new Menu(400, null, "电视剧", "icon-book-open", "app.tv"),
-            new Menu(500, null, "影视发行", "icon-book-open", "app.issue"),
-            new Menu(600, null, "艺人管理", "icon-basket-loaded", "app.star"),
             new Menu(700, null, "帐号管理", "icon-settings", "app.account"),
             new Menu(800, null, "文件上传", "icon-settings", "app.upload"),
-            new Menu(900, null, "新建页面", "icon-settings", "app.frame")
+            new Menu(900, null, "页面管理", "icon-settings", "app.frame")
     };
-
 
 
     private long id;

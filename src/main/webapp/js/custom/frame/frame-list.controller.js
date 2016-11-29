@@ -2,20 +2,20 @@
     'use strict';
     angular
         .module('custom')
-        .controller('ImageListController', ImageListController);
-    ImageListController.$inject = ['$scope', 'ImgService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
+        .controller('FrameListController', FrameListController);
+    FrameListController.$inject = ['$scope', 'FrameService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
 
-    function ImageListController($scope, ImgService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
+    function FrameListController($scope, FrameService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
 
         $scope.tableParams = {page : 1, count : 10, searchStr: null}
         //如果在dialog里面就显示选择按钮, 这样可以复用一个页面, this is great!
         $scope.inDialog = angular.isUndefined($scope.ngDialogData) ? false : true
 
         $scope.activate = function() {
-            $scope.imgTableParams = new NgTableParams($scope.tableParams, {
+            $scope.frameTableParams = new NgTableParams($scope.tableParams, {
                 getData: function ($defer, params) {
                     blockUI.start();
-                    ImgService.listImgs(params.parameters()).success(function (data) {
+                    FrameService.listFrames(params.parameters()).success(function (data) {
                         if (data.status == 200) {
                             params.total(data.totalCount);
                             console.log(data);
@@ -49,9 +49,9 @@
                     //然后子scope里面就不能用this了,因为this就指向了子scope,
                     //实际上在table的每一行里面的点击是调用了父scope的delete方法
                     blockUI.start();
-                    ImgService.deleteImg(id).success(function () {
+                    FrameService.deleteFrame(id).success(function () {
                         Notify.alert("删除成功!", {status:"success", timeout: 3000});
-                        $scope.imgTableParams.reload();
+                        $scope.frameTableParams.reload();
                         blockUI.stop();
                     }).error(function(){
                         blockUI.stop();
@@ -61,23 +61,35 @@
             });
         }
 
-        //添加
-        $scope.add = function(userId){
-            var dialog= ngDialog.open({
-                template: 'app/views/custom/admin/img/upload-img.html',
-                controller: 'UploadImgController',
-                className: 'ngdialog-theme-default custom-width-800',
-                data : {id:userId, type:2}
-            })
-            dialog.closePromise.then(function(data){
-                $scope.imgTableParams.reload();
-            });
-        }
-
-
         $scope.choose = function(item){
             var result = {status:1, url:item.url};
             $scope.closeThisDialog(result);
+        }
+
+        $scope.edit = function(item){
+            if(item.type == '首页') {
+                var dialog = ngDialog.open({
+                    template: 'app/views/custom/frame/cover.html',
+                    controller: 'CoverController',
+                    className: 'ngdialog-theme-default max-dialog',
+                    data: {item: item}
+                });
+                dialog.closePromise.then(function () {
+                    $scope.frameTableParams.reload();
+                });
+            }else if(item.type == '关于我们'){
+                var dialog = ngDialog.open({
+                    template: 'app/views/custom/frame/about.html',
+                    controller: 'AboutController',
+                    className: 'ngdialog-theme-default max-dialog',
+                    data: {item: item}
+                });
+                dialog.closePromise.then(function () {
+                    $scope.frameTableParams.reload();
+                });
+            }else{
+
+            }
         }
 
     }

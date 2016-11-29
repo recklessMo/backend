@@ -54,7 +54,7 @@ public class ImgController {
         img.setName(temp);
         img.setFileName(fileName);
         img.setTime(new Date());
-        img.setUrl("www.zhiyouchuanmei.com/upload/" + fileName);
+        img.setUrl("/upload/" + fileName);
         imgService.addImg(img);
         return new JsonResponse(200, null, null);
     }

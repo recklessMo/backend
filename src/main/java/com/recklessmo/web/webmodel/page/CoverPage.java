@@ -5,141 +5,154 @@ package com.recklessmo.web.webmodel.page;
  */
 public class CoverPage {
 
-    private String img1;
-    private String img1Href;
-    private String img2;
-    private String img2Href;
-    private String img3;
-    private String img3Href;
+    private long id;
 
-    private String imgLeftBottom;
-    private String textLeftBottom;
-    private String hrefLeftBottom;
-    private String imgRightMiddle;
-    private String textRightMiddle;
-    private String hrefRightMiddle;
-    private String imgRightBottom;
-    private String textRightBottom;
-    private String hrefRightBottom;
+    private String firstHeadImg;
+    private String firstHeadHref;
 
+    private String secondHeadImg;
+    private String secondHeadHref;
 
-    public String getImg1Href() {
-        return img1Href;
+    private String thirdHeadImg;
+    private String thirdHeadHref;
+
+    private String leftImg;
+    private String leftHref;
+    private String leftText;
+
+    private String rightMiddleImg;
+    private String rightMiddleHref;
+    private String rightMiddleText;
+
+    private String rightBottomImg;
+    private String rightBottomHref;
+    private String rightBottomText;
+
+    public long getId() {
+        return id;
     }
 
-    public void setImg1Href(String img1Href) {
-        this.img1Href = img1Href;
+    public void setId(long id) {
+        this.id = id;
     }
 
-    public String getImg2Href() {
-        return img2Href;
+    public String getFirstHeadImg() {
+        return firstHeadImg;
     }
 
-    public void setImg2Href(String img2Href) {
-        this.img2Href = img2Href;
+    public void setFirstHeadImg(String firstHeadImg) {
+        this.firstHeadImg = firstHeadImg;
     }
 
-    public String getImg3Href() {
-        return img3Href;
+    public String getFirstHeadHref() {
+        return firstHeadHref;
     }
 
-    public void setImg3Href(String img3Href) {
-        this.img3Href = img3Href;
+    public void setFirstHeadHref(String firstHeadHref) {
+        this.firstHeadHref = firstHeadHref;
     }
 
-    public String getHrefLeftBottom() {
-        return hrefLeftBottom;
+    public String getSecondHeadImg() {
+        return secondHeadImg;
     }
 
-    public void setHrefLeftBottom(String hrefLeftBottom) {
-        this.hrefLeftBottom = hrefLeftBottom;
+    public void setSecondHeadImg(String secondHeadImg) {
+        this.secondHeadImg = secondHeadImg;
     }
 
-    public String getHrefRightMiddle() {
-        return hrefRightMiddle;
+    public String getSecondHeadHref() {
+        return secondHeadHref;
     }
 
-    public void setHrefRightMiddle(String hrefRightMiddle) {
-        this.hrefRightMiddle = hrefRightMiddle;
+    public void setSecondHeadHref(String secondHeadHref) {
+        this.secondHeadHref = secondHeadHref;
     }
 
-    public String getHrefRightBottom() {
-        return hrefRightBottom;
+    public String getThirdHeadImg() {
+        return thirdHeadImg;
     }
 
-    public void setHrefRightBottom(String hrefRightBottom) {
-        this.hrefRightBottom = hrefRightBottom;
+    public void setThirdHeadImg(String thirdHeadImg) {
+        this.thirdHeadImg = thirdHeadImg;
     }
 
-    public String getImg1() {
-        return img1;
+    public String getThirdHeadHref() {
+        return thirdHeadHref;
     }
 
-    public void setImg1(String img1) {
-        this.img1 = img1;
+    public void setThirdHeadHref(String thirdHeadHref) {
+        this.thirdHeadHref = thirdHeadHref;
     }
 
-    public String getImg2() {
-        return img2;
+    public String getLeftImg() {
+        return leftImg;
     }
 
-    public void setImg2(String img2) {
-        this.img2 = img2;
+    public void setLeftImg(String leftImg) {
+        this.leftImg = leftImg;
     }
 
-    public String getImg3() {
-        return img3;
+    public String getLeftHref() {
+        return leftHref;
     }
 
-    public void setImg3(String img3) {
-        this.img3 = img3;
+    public void setLeftHref(String leftHref) {
+        this.leftHref = leftHref;
     }
 
-    public String getImgLeftBottom() {
-        return imgLeftBottom;
+    public String getLeftText() {
+        return leftText;
     }
 
-    public void setImgLeftBottom(String imgLeftBottom) {
-        this.imgLeftBottom = imgLeftBottom;
+    public void setLeftText(String leftText) {
+        this.leftText = leftText;
     }
 
-    public String getTextLeftBottom() {
-        return textLeftBottom;
+    public String getRightMiddleImg() {
+        return rightMiddleImg;
     }
 
-    public void setTextLeftBottom(String textLeftBottom) {
-        this.textLeftBottom = textLeftBottom;
+    public void setRightMiddleImg(String rightMiddleImg) {
+        this.rightMiddleImg = rightMiddleImg;
     }
 
-    public String getImgRightMiddle() {
-        return imgRightMiddle;
+    public String getRightMiddleHref() {
+        return rightMiddleHref;
     }
 
-    public void setImgRightMiddle(String imgRightMiddle) {
-        this.imgRightMiddle = imgRightMiddle;
+    public void setRightMiddleHref(String rightMiddleHref) {
+        this.rightMiddleHref = rightMiddleHref;
     }
 
-    public String getTextRightMiddle() {
-        return textRightMiddle;
+    public String getRightMiddleText() {
+        return rightMiddleText;
     }
 
-    public void setTextRightMiddle(String textRightMiddle) {
-        this.textRightMiddle = textRightMiddle;
+    public void setRightMiddleText(String rightMiddleText) {
+        this.rightMiddleText = rightMiddleText;
     }
 
-    public String getImgRightBottom() {
-        return imgRightBottom;
+    public String getRightBottomImg() {
+        return rightBottomImg;
     }
 
-    public void setImgRightBottom(String imgRightBottom) {
-        this.imgRightBottom = imgRightBottom;
+    public void setRightBottomImg(String rightBottomImg) {
+        this.rightBottomImg = rightBottomImg;
     }
 
-    public String getTextRightBottom() {
-        return textRightBottom;
+    public String getRightBottomHref() {
+        return rightBottomHref;
     }
 
-    public void setTextRightBottom(String textRightBottom) {
-        this.textRightBottom = textRightBottom;
+    public void setRightBottomHref(String rightBottomHref) {
+        this.rightBottomHref = rightBottomHref;
+    }
+
+    public String getRightBottomText() {
+        return rightBottomText;
+    }
+
+    public void setRightBottomText(String rightBottomText) {
+        this.rightBottomText = rightBottomText;
     }
 }

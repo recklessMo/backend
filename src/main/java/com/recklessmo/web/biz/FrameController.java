@@ -1,17 +1,18 @@
 package com.recklessmo.web.biz;
 
 import com.recklessmo.model.Page.Frame;
+import com.recklessmo.model.img.Img;
 import com.recklessmo.response.JsonResponse;
 import com.recklessmo.service.biz.FrameService;
 import com.recklessmo.web.webmodel.page.Page;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
+import java.io.InputStream;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -39,6 +40,23 @@ public class FrameController {
         int count = frameService.listFramesCount(page);
         List<Frame> data = frameService.listFrames(page);
         return new JsonResponse(200, data, count);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/add", method = {RequestMethod.POST})
+    @ResponseBody
+    public JsonResponse add() throws Exception{
+
+        return new JsonResponse(200, null, null);
+    }
+
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/delete", method = {RequestMethod.POST})
+    @ResponseBody
+    public JsonResponse delete(@RequestBody long id) throws Exception{
+        frameService.deleteFrame(id);
+        return new JsonResponse(200, null, null);
     }
 
 

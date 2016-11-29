@@ -2,10 +2,10 @@
     'use strict';
     angular
         .module('custom')
-        .controller('CoverController', CoverController);
-    CoverController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
+        .controller('AboutController', AboutController);
+    AboutController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
 
-    function CoverController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
+    function AboutController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
@@ -14,28 +14,19 @@
         //发布
         $scope.publish = function () {
             //判断是否都填写完整了
-            if(angular.isUndefined($scope.obj.firstHeadImg)
-                || angular.isUndefined($scope.obj.firstHeadHref)
-                || angular.isUndefined($scope.obj.secondHeadImg)
-                || angular.isUndefined($scope.obj.secondHeadHref)
-                || angular.isUndefined($scope.obj.thirdHeadImg)
-                || angular.isUndefined($scope.obj.thirdHeadHref)
-                || angular.isUndefined($scope.obj.leftImg)
-                || angular.isUndefined($scope.obj.leftHref)
-                || angular.isUndefined($scope.obj.leftText)
-                || angular.isUndefined($scope.obj.rightMiddleImg)
-                || angular.isUndefined($scope.obj.rightMiddleHref)
-                || angular.isUndefined($scope.obj.rightMiddleText)
-                || angular.isUndefined($scope.obj.rightBottomImg)
-                || angular.isUndefined($scope.obj.rightBottomHref)
-                || angular.isUndefined($scope.obj.rightBottomText)
+            if(angular.isUndefined($scope.obj.firstImg)
+                || angular.isUndefined($scope.obj.companyIntro)
+                || angular.isUndefined($scope.obj.leaderPicList)
+                || angular.isUndefined($scope.obj.companyCulture)
+                || angular.isUndefined($scope.obj.corpText)
+                || angular.isUndefined($scope.obj.resumePost)
             ){
                 SweetAlert.error("请填写完毕所有字段!");
                 return ;
             }
 
             var data = $scope.obj;
-            CoverService.publishCover(data).success(function (data) {
+            CoverService.publishAbout(data).success(function (data) {
                 if (data.status == 200) {
                     SweetAlert.success("发布成功!");
                     $scope.closeThisDialog();
@@ -61,7 +52,7 @@
                 //不同的type对应不同位置的img
                 var url = data.value.url;
                 if(type === 1){
-                    $scope.obj.firstHeadImg = url;
+                    $scope.obj.firstImg = url;
                 }else if(type === 2){
                     $scope.obj.secondHeadImg = url;
                 }else if(type === 3){
@@ -76,13 +67,45 @@
             });
         }
 
+        //领导团队照片
+        $scope.leaderPicTableParams = new NgTableParams({}, {
+            counts:[],
+            getData: function($defer, params){
+                if(!$scope.obj.leaderPicList){
+                    $scope.obj.leaderPicList = [];
+                }
+                $defer.resolve($scope.obj.leaderPicList);
+            }
+        });
 
-        //打开搜索跳转页面的窗口
-        $scope.searchPage = function (type) {
+        $scope.addLeaderItem = function(data){
+            $scope.obj.leaderPicList.push(data);
+        }
+
+        $scope.deleteLeaderItem = function(row){
+            $scope.obj.leaderPicList = _.without($scope.obj.leaderPicList , row);
+            $scope.leaderPicTableParams.reload();
+        }
+
+        //团队照片
+        $scope.teamPicTableParams = new NgTableParams({}, {
+
+        });
+
+        $scope.addTeamPicItem = function(data){
+
+        }
+
+        $scope.deleteTeamPicItem = function(data){
+
+        }
+
+        //在img里面进行设置
+        $scope.searchImgInRow = function(row){
             var dialog= ngDialog.open({
-                template: 'app/views/custom/frame/frame-list.html',
+                template: 'app/views/custom/admin/img/img-list.html',
                 className: 'ngdialog-theme-default max-dialog',
-                controller: 'FrameListController',
+                controller: 'ImageListController',
                 data: {inDialog: true}
             });
             dialog.closePromise.then(function(data){
@@ -90,20 +113,7 @@
                     return;
                 }
                 //不同的type对应不同位置的img
-                var url = data.value.url;
-                if(type === 1){
-                    $scope.obj.firstHeadHref = url;
-                }else if(type === 2){
-                    $scope.obj.secondHeadHref = url;
-                }else if(type === 3){
-                    $scope.obj.thirdHeadHref = url;
-                }else if(type == 4){
-                    $scope.obj.leftHref = url;
-                }else if(type == 5){
-                    $scope.obj.rightMiddleHref = url;
-                }else if(type == 6){
-                    $scope.obj.rightBottomHref = url;
-                }
+                row.pic = data.value.url;
             });
         }
 

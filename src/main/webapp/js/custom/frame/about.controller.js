@@ -15,6 +15,7 @@
         $scope.publish = function () {
             //判断是否都填写完整了
             if(angular.isUndefined($scope.obj.firstImg)
+                || angular.isUndefined($scope.obj.secondImg)
                 || angular.isUndefined($scope.obj.companyIntro)
                 || angular.isUndefined($scope.obj.leaderPicList)
                 || angular.isUndefined($scope.obj.teamPicList)
@@ -54,6 +55,8 @@
                 var url = data.value.url;
                 if(type === 1){
                     $scope.obj.firstImg = url;
+                }else if(type === 2){
+                    $scope.obj.secondImg = url;
                 }
             });
         }

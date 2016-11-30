@@ -9,26 +9,28 @@
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
-        $scope.obj.id = $scope.ngDialogData.item.id;
+        $scope.obj.firstHead = angular.isUndefined($scope.obj.firstHead) ? {} : $scope.obj.firstHead;
+        $scope.obj.secondHead = angular.isUndefined($scope.obj.secondHead) ? {} : $scope.obj.secondHead;
+        $scope.obj.thirdHead = angular.isUndefined($scope.obj.thirdHead) ? {} : $scope.obj.thirdHead;
 
         //发布
         $scope.publish = function () {
             //判断是否都填写完整了
-            if(angular.isUndefined($scope.obj.firstHeadImg)
-                || angular.isUndefined($scope.obj.firstHeadHref)
-                || angular.isUndefined($scope.obj.secondHeadImg)
-                || angular.isUndefined($scope.obj.secondHeadHref)
-                || angular.isUndefined($scope.obj.thirdHeadImg)
-                || angular.isUndefined($scope.obj.thirdHeadHref)
-                || angular.isUndefined($scope.obj.leftImg)
-                || angular.isUndefined($scope.obj.leftHref)
-                || angular.isUndefined($scope.obj.leftText)
-                || angular.isUndefined($scope.obj.rightMiddleImg)
-                || angular.isUndefined($scope.obj.rightMiddleHref)
-                || angular.isUndefined($scope.obj.rightMiddleText)
-                || angular.isUndefined($scope.obj.rightBottomImg)
-                || angular.isUndefined($scope.obj.rightBottomHref)
-                || angular.isUndefined($scope.obj.rightBottomText)
+            if(angular.isUndefined($scope.obj.firstHead.url)
+                || angular.isUndefined($scope.obj.firstHead.href)
+                || angular.isUndefined($scope.obj.secondHead.url)
+                || angular.isUndefined($scope.obj.secondHead.href)
+                || angular.isUndefined($scope.obj.thirdHead.url)
+                || angular.isUndefined($scope.obj.thirdHead.href)
+                || angular.isUndefined($scope.obj.left.url)
+                || angular.isUndefined($scope.obj.left.href)
+                || angular.isUndefined($scope.obj.left.text)
+                || angular.isUndefined($scope.obj.rightMiddle.url)
+                || angular.isUndefined($scope.obj.rightMiddle.href)
+                || angular.isUndefined($scope.obj.rightMiddle.text)
+                || angular.isUndefined($scope.obj.rightBottom.url)
+                || angular.isUndefined($scope.obj.rightBottom.href)
+                || angular.isUndefined($scope.obj.rightBottom.text)
             ){
                 SweetAlert.error("请填写完毕所有字段!");
                 return ;
@@ -61,17 +63,17 @@
                 //不同的type对应不同位置的img
                 var url = data.value.url;
                 if(type === 1){
-                    $scope.obj.firstHeadImg = url;
+                    _.set($scope.obj, 'firstHead.url', url);
                 }else if(type === 2){
-                    $scope.obj.secondHeadImg = url;
+                    _.set($scope.obj, 'secondHead.url', url);
                 }else if(type === 3){
-                    $scope.obj.thirdHeadImg = url;
+                    _.set($scope.obj, 'thirdHead.url', url);
                 }else if(type == 4){
-                    $scope.obj.leftImg = url;
+                    _.set($scope.obj, 'left.url', url);
                 }else if(type == 5){
-                    $scope.obj.rightMiddleImg = url;
+                    _.set($scope.obj, 'rightMiddle.url', url);
                 }else if(type == 6){
-                    $scope.obj.rightBottomImg = url;
+                    _.set($scope.obj, 'rightBottom.url', url);
                 }
             });
         }
@@ -92,17 +94,17 @@
                 //不同的type对应不同位置的img
                 var url = data.value.url;
                 if(type === 1){
-                    $scope.obj.firstHeadHref = url;
+                    _.set($scope.obj, 'firstHead.href', url);
                 }else if(type === 2){
-                    $scope.obj.secondHeadHref = url;
+                    _.set($scope.obj, 'secondHead.href', url);
                 }else if(type === 3){
-                    $scope.obj.thirdHeadHref = url;
+                    _.set($scope.obj, 'thirdHead.href', url);
                 }else if(type == 4){
-                    $scope.obj.leftHref = url;
+                    _.set($scope.obj, 'left.href', url);
                 }else if(type == 5){
-                    $scope.obj.rightMiddleHref = url;
+                    _.set($scope.obj, 'rightMiddle.href', url);
                 }else if(type == 6){
-                    $scope.obj.rightBottomHref = url;
+                    _.set($scope.obj, 'rightBottom.href', url);
                 }
             });
         }

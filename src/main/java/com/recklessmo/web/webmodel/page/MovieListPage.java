@@ -1,16 +1,18 @@
 package com.recklessmo.web.webmodel.page;
 
+import java.util.List;
+
 /**
- * Created by hpf on 11/22/16.
+ * Created by hpf on 11/29/16.
  */
-public class CoverPage {
+public class MovieListPage {
 
     private ImgObject firstHead;
     private ImgObject secondHead;
     private ImgObject thirdHead;
-    private ImgObject left;
-    private ImgObject rightMiddle;
-    private ImgObject rightBottom;
+
+    private List<ImgObject> movList;
+    private List<ArticleObject> articleObjectList;
 
 
     public ImgObject getFirstHead() {
@@ -37,27 +39,19 @@ public class CoverPage {
         this.thirdHead = thirdHead;
     }
 
-    public ImgObject getLeft() {
-        return left;
+    public List<ImgObject> getMovList() {
+        return movList;
     }
 
-    public void setLeft(ImgObject left) {
-        this.left = left;
+    public void setMovList(List<ImgObject> movList) {
+        this.movList = movList;
     }
 
-    public ImgObject getRightMiddle() {
-        return rightMiddle;
+    public List<ArticleObject> getArticleObjectList() {
+        return articleObjectList;
     }
 
-    public void setRightMiddle(ImgObject rightMiddle) {
-        this.rightMiddle = rightMiddle;
-    }
-
-    public ImgObject getRightBottom() {
-        return rightBottom;
-    }
-
-    public void setRightBottom(ImgObject rightBottom) {
-        this.rightBottom = rightBottom;
+    public void setArticleObjectList(List<ArticleObject> articleObjectList) {
+        this.articleObjectList = articleObjectList;
     }
 }

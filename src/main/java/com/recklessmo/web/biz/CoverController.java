@@ -8,6 +8,7 @@ import com.recklessmo.service.ftp.FtpUploadService;
 import com.recklessmo.service.template.TemplateService;
 import com.recklessmo.web.webmodel.page.AboutPage;
 import com.recklessmo.web.webmodel.page.CoverPage;
+import com.recklessmo.web.webmodel.page.MovieListPage;
 import org.apache.velocity.VelocityContext;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -62,6 +63,24 @@ public class CoverController {
             frameService.updateContent(frame);
             String content = templateService.getTemplate(context, "/templates/about.vm");
             ftpUploadService.uploadFileByFtp("/www", content, "about.html");
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/movieList", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishMovieList(@RequestBody MovieListPage page){
+        VelocityContext context = new VelocityContext();
+        try {
+            context.put("data", page);
+            Frame frame = frameService.getById(3);
+            frame.setContent(JSONObject.toJSONString(page));
+            frameService.updateContent(frame);
+            String content = templateService.getTemplate(context, "/templates/movie-list.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, "movie-list.html");
         }catch (Exception e){
             e.printStackTrace();
         }

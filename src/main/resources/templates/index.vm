@@ -61,27 +61,27 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <a href="$data.firstHeadHref">
+                    <a href="$data.firstHead.href">
                         <img class="img-responsive"
-                             src="$data.firstHeadImg"/>
+                             src="$data.firstHead.url"/>
                     </a>
 
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                    <a href="$data.secondHeadHref">
+                    <a href="$data.secondHead.href">
                         <img class="img-responsive"
-                             src="$data.secondHeadImg"/>
+                             src="$data.secondHead.url"/>
                     </a>
 
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                    <a href="$data.thirdHeadHref">
+                    <a href="$data.thirdHead.href">
                         <img class="img-responsive"
-                             src="$data.thirdHeadImg"/>
+                             src="$data.thirdHead.url"/>
                     </a>
 
                     <div class="carousel-caption">
@@ -104,11 +104,11 @@
     <div class="row full">
         <div class="col-md-6">
             <figure class="effect-zoe">
-                <img src="$data.leftImg"/>
+                <img src="$data.left.url"/>
                 <figcaption>
                     <h3>挚友资讯</h3>
-                    <p>$data.leftText</p>
-                    <a href="$data.leftHref"></a>
+                    <p>$data.left.text</p>
+                    <a href="$data.left.href"></a>
                 </figcaption>
             </figure>
         </div><!--End Col 6-->
@@ -116,12 +116,12 @@
         <div class="col-md-6">
             <div class="col-md-12">
                 <figure class="effect-zoe">
-                    <img class="img-responsive" src="$data.rightMiddleImg"
+                    <img class="img-responsive" src="$data.rightMiddle.url"
                          alt="Aurrion">
                     <figcaption>
                         <h3>剧本投递</h3>
-                        <p>$data.rightMiddleText</p>
-                        <a href="$data.rightMiddleHref"></a>
+                        <p>$data.rightMiddle.text</p>
+                        <a href="$data.rightMiddle.href"></a>
                     </figcaption>
                 </figure>
             </div>
@@ -129,11 +129,11 @@
             <div class="col-md-12">
                 <figure class="effect-zoe">
                     <img class="img-responsive"
-                         src="$data.rightBottomImg">
+                         src="$data.rightBottom.url">
                     <figcaption>
                         <h3>挚友资讯</h3>
-                        <p>$data.rightBottomText</p>
-                        <a href="$data.rightBottomHref"></a>
+                        <p>$data.rightBottom.text</p>
+                        <a href="$data.rightBottom.href"></a>
                     </figcaption>
                 </figure>
             </div>

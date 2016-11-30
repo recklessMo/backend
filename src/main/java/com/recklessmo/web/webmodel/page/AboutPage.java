@@ -7,50 +7,28 @@ import java.util.List;
  */
 public class AboutPage {
 
-    class People{
-        private String pic;
-        private String name;
-        private String intro;
-
-        public String getPic() {
-            return pic;
-        }
-
-        public void setPic(String pic) {
-            this.pic = pic;
-        }
-
-        public String getName() {
-            return name;
-        }
-
-        public void setName(String name) {
-            this.name = name;
-        }
-
-        public String getIntro() {
-            return intro;
-        }
-
-        public void setIntro(String intro) {
-            this.intro = intro;
-        }
-    }
-
     private String firstImg;
+    private String secondImg;
     private String companyIntro;
-    private List<People> leaderPicList;
-    private List<People> teamPicList;
+    private List<PeopleObject> leaderPicList;
+    private List<PeopleObject> teamPicList;
     private String companyCulture;
     private String corpText;
     private String resumePost;
 
+    public String getSecondImg() {
+        return secondImg;
+    }
 
-    public List<People> getTeamPicList() {
+    public void setSecondImg(String secondImg) {
+        this.secondImg = secondImg;
+    }
+
+    public List<PeopleObject> getTeamPicList() {
         return teamPicList;
     }
 
-    public void setTeamPicList(List<People> teamPicList) {
+    public void setTeamPicList(List<PeopleObject> teamPicList) {
         this.teamPicList = teamPicList;
     }
 
@@ -70,11 +48,11 @@ public class AboutPage {
         this.companyIntro = companyIntro;
     }
 
-    public List<People> getLeaderPicList() {
+    public List<PeopleObject> getLeaderPicList() {
         return leaderPicList;
     }
 
-    public void setLeaderPicList(List<People> leaderPicList) {
+    public void setLeaderPicList(List<PeopleObject> leaderPicList) {
         this.leaderPicList = leaderPicList;
     }
 

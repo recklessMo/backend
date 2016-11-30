@@ -26,6 +26,15 @@
             });
         }
 
+        this.publishMovieList = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/movieList",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
     }
 })
 ();

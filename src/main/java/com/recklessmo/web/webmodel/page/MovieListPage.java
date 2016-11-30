@@ -11,8 +11,8 @@ public class MovieListPage {
     private ImgObject secondHead;
     private ImgObject thirdHead;
 
-    private List<ImgObject> movList;
-    private List<ArticleObject> articleObjectList;
+    private List<ImgObject> filmList;
+    private List<ArticleObject> articleList;
 
 
     public ImgObject getFirstHead() {
@@ -39,19 +39,19 @@ public class MovieListPage {
         this.thirdHead = thirdHead;
     }
 
-    public List<ImgObject> getMovList() {
-        return movList;
+    public List<ImgObject> getFilmList() {
+        return filmList;
     }
 
-    public void setMovList(List<ImgObject> movList) {
-        this.movList = movList;
+    public void setFilmList(List<ImgObject> filmList) {
+        this.filmList = filmList;
     }
 
-    public List<ArticleObject> getArticleObjectList() {
-        return articleObjectList;
+    public List<ArticleObject> getArticleList() {
+        return articleList;
     }
 
-    public void setArticleObjectList(List<ArticleObject> articleObjectList) {
-        this.articleObjectList = articleObjectList;
+    public void setArticleList(List<ArticleObject> articleList) {
+        this.articleList = articleList;
     }
 }

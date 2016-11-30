@@ -9,9 +9,6 @@
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
-        $scope.obj.firstHead = angular.isUndefined($scope.obj.firstHead) ? {} : $scope.obj.firstHead;
-        $scope.obj.secondHead = angular.isUndefined($scope.obj.secondHead) ? {} : $scope.obj.secondHead;
-        $scope.obj.thirdHead = angular.isUndefined($scope.obj.thirdHead) ? {} : $scope.obj.thirdHead;
 
         //发布
         $scope.publish = function () {

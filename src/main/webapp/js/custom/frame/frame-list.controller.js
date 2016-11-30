@@ -87,8 +87,16 @@
                 dialog.closePromise.then(function () {
                     $scope.frameTableParams.reload();
                 });
-            }else{
-
+            }else if(item.type == '电影'){
+                var dialog = ngDialog.open({
+                    template: 'app/views/custom/frame/movie-list.html',
+                    controller: 'MovieListController',
+                    className: 'ngdialog-theme-default max-dialog',
+                    data: {item: item}
+                });
+                dialog.closePromise.then(function () {
+                    $scope.frameTableParams.reload();
+                });
             }
         }
 

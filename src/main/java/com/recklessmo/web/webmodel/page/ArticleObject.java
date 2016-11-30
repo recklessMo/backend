@@ -6,10 +6,18 @@ package com.recklessmo.web.webmodel.page;
 public class ArticleObject {
 
     private String url;
+    private String href;
     private String title;
     private String desc;
     private String date;
 
+    public String getHref() {
+        return href;
+    }
+
+    public void setHref(String href) {
+        this.href = href;
+    }
 
     public String getUrl() {
         return url;

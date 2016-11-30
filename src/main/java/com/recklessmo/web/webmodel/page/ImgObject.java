@@ -6,8 +6,17 @@ package com.recklessmo.web.webmodel.page;
 public class ImgObject {
 
     private String url;
+    private String title;
     private String text;
     private String href;
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
     public String getText() {
         return text;

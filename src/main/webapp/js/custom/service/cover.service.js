@@ -35,6 +35,63 @@
             });
         }
 
+        this.publishSeriesList = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/seriesList",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishIssueList = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/issueList",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishStarList = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/starList",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishFilmDetail = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/filmDetail",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishStarDetail = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/starDetail",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishNewsDetail = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/newsDetail",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+
+
+
     }
 })
 ();

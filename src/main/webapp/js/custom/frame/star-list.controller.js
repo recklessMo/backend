@@ -2,10 +2,10 @@
     'use strict';
     angular
         .module('custom')
-        .controller('MovieListController', MovieListController);
-    MovieListController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
+        .controller('StarListController', StarListController);
+    StarListController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
 
-    function MovieListController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
+    function StarListController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
@@ -13,19 +13,13 @@
         //发布
         $scope.publish = function () {
             //判断是否都填写完整了
-            if(angular.isUndefined($scope.obj.firstHead.url)
-                || angular.isUndefined($scope.obj.firstHead.href)
-                || angular.isUndefined($scope.obj.secondHead.url)
-                || angular.isUndefined($scope.obj.secondHead.href)
-                || angular.isUndefined($scope.obj.thirdHead.url)
-                || angular.isUndefined($scope.obj.thirdHead.href)
-            ){
+            if(angular.isUndefined($scope.obj.starList)){
                 SweetAlert.error("请填写完毕所有字段!");
                 return ;
             }
 
             var data = $scope.obj;
-            CoverService.publishMovieList(data).success(function (data) {
+            CoverService.publishStarList(data).success(function (data) {
                 if (data.status == 200) {
                     SweetAlert.success("发布成功!");
                     $scope.closeThisDialog();
@@ -85,44 +79,24 @@
             });
         }
 
-        //电影列表
-        $scope.filmTableParams = new NgTableParams({}, {
+        //电视剧列表
+        $scope.starTableParams = new NgTableParams({}, {
             counts:[],
             getData: function($defer, params){
-                if(!$scope.obj.filmList){
-                    $scope.obj.filmList = [];
+                if(!$scope.obj.starList){
+                    $scope.obj.starList = [];
                 }
-                $defer.resolve($scope.obj.filmList);
+                $defer.resolve($scope.obj.starList);
             }
         });
 
-        $scope.addFilmItem = function(data){
-            $scope.obj.filmList.push(data);
+        $scope.addStarItem = function(data){
+            $scope.obj.starList.push(data);
         }
 
-        $scope.deleteFilmItem = function(row){
-            $scope.obj.filmList = _.without($scope.obj.filmList , row);
-            $scope.filmTableParams.reload();
-        }
-
-        //资讯
-        $scope.articleTableParams = new NgTableParams({}, {
-            counts:[],
-            getData: function($defer, params){
-                if(!$scope.obj.articleList){
-                    $scope.obj.articleList = [];
-                }
-                $defer.resolve($scope.obj.articleList);
-            }
-        });
-
-        $scope.addArticleItem = function(data){
-            $scope.obj.articleList.push(data);
-        }
-
-        $scope.deleteArticleItem = function(row){
-            $scope.obj.articleList = _.without($scope.obj.articleList , row);
-            $scope.articleTableParams.reload();
+        $scope.deleteStarItem = function(row){
+            $scope.obj.starList = _.without($scope.obj.starList , row);
+            $scope.starTableParams.reload();
         }
 
         //在img里面进行设置

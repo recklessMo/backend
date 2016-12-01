@@ -1,12 +1,18 @@
 <div ng-controller="FrameListController" style="background: #fff;overflow: auto;height:100%;padding: 15px;border: 1px solid #cfdbe2;">
     <div class="row">
-        <div class="col-md-3 pull-left">
-            <button class="btn btn-info" ng-click="add(-1)">
-                添加新页面
+        <div class="col-md-6 pull-left">
+            <button class="btn btn-info" ng-click="add(1)">
+                添加(电影/电视剧/影视发行)详情页
+            </button>
+            <button class="btn btn-info" ng-click="add(2)">
+                添加艺人详情页
+            </button>
+            <button class="btn btn-info" ng-click="add(3)">
+                添加资讯详情页
             </button>
         </div>
 
-        <div class="col-md-7 pull-right">
+        <div class="col-md-4 pull-right">
             <div class="pull-right">
                 <button class="btn btn-info" ng-click="activate()">
                     查询

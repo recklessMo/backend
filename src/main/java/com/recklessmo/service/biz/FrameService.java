@@ -1,5 +1,6 @@
 package com.recklessmo.service.biz;
 
+import com.alibaba.fastjson.JSONObject;
 import com.recklessmo.dao.page.FrameDAO;
 import com.recklessmo.model.Page.Frame;
 import com.recklessmo.web.webmodel.page.Page;
@@ -31,16 +32,16 @@ public class FrameService {
         return frameDAO.listFramesCount(page);
     }
 
-    public void updateContent(Frame frame){
-        frameDAO.updateContent(frame);
-    }
-
     public void deleteFrame(long id){
         frameDAO.deleteFrame(id);
     }
 
     public Frame getById(long id){
         return frameDAO.getById(id);
+    }
+
+    public void updateContent(long id, String content){
+        frameDAO.updateContent(id, content);
     }
 
 }

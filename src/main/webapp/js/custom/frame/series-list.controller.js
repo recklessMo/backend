@@ -2,10 +2,10 @@
     'use strict';
     angular
         .module('custom')
-        .controller('MovieListController', MovieListController);
-    MovieListController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
+        .controller('SeriesListController', SeriesListController);
+    SeriesListController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
 
-    function MovieListController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
+    function SeriesListController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
@@ -25,7 +25,7 @@
             }
 
             var data = $scope.obj;
-            CoverService.publishMovieList(data).success(function (data) {
+            CoverService.publishSeriesList(data).success(function (data) {
                 if (data.status == 200) {
                     SweetAlert.success("发布成功!");
                     $scope.closeThisDialog();
@@ -85,7 +85,7 @@
             });
         }
 
-        //电影列表
+        //电视剧列表
         $scope.filmTableParams = new NgTableParams({}, {
             counts:[],
             getData: function($defer, params){

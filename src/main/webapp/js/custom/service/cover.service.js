@@ -71,6 +71,24 @@
             });
         }
 
+        this.publishSeriesDetail = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/seriesDetail",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
+        this.publishIssueDetail = function(obj){
+            return $http({
+                method: "POST",
+                url: "/v1/cover/publish/issueDetail",
+                data: obj,
+                timeout: 5000
+            });
+        }
+
         this.publishStarDetail = function(obj){
             return $http({
                 method: "POST",

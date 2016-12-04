@@ -6,19 +6,20 @@
     <title>挚友传媒</title>
     <meta name="description" content="挚友  挚友传媒 传媒 四川挚友传媒有限公司">
     <meta name="title" content="挚友传媒官方网站">
-
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/styles.css"/>-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
-    <!-- Custom Fonts -->
-    <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
     <link rel="shortcut icon" href="./img/logo.png"/>
+
+    <style>
+        .container p{
+            text-align: center;
+        }
+    </style>
 </head>
-<!--<canvas style="position: absolute;z-index: -1;width: 100%;"></canvas>-->
 <body>
 
 <!--顶部的菜单栏-->
-<!--opacity 0.6-->
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -37,9 +38,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="menu" style="position:absolute;right:0;background: #FFF;">
             <ul class="nav navbar-nav" style="padding-top:30px;">
-                <li><a href="/index.html" style="color:#477b39;">首页</a></li>
+                <li><a href="/index.html" >首页</a></li>
                 <li><a href="/about.html">关于我们</a></li>
-                <li><a href="/movie-list.html">电影</a></li>
+                <li><a href="/movie-list.html" style="color:#477b39;">电影</a></li>
                 <li><a href="/series-list.html">电视剧</a></li>
                 <li><a href="/issue-list.html">影视发行</a></li>
                 <li><a href="/star-list.html">艺人经纪</a></li>
@@ -48,100 +49,12 @@
     </div>
 </div>
 
-<!--中间的轮播栏-->
-<div class="container-fluid" style="margin-top:80px;">
-    <div class="row">
-        <header id="myCarousel" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <a href="$data.firstHead.href">
-                        <img class="img-responsive"
-                             src="$data.firstHead.url"/>
-                    </a>
-
-                    <div class="carousel-caption">
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="$data.secondHead.href">
-                        <img class="img-responsive"
-                             src="$data.secondHead.url"/>
-                    </a>
-
-                    <div class="carousel-caption">
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="$data.thirdHead.href">
-                        <img class="img-responsive"
-                             src="$data.thirdHead.url"/>
-                    </a>
-
-                    <div class="carousel-caption">
-                    </div>
-                </div>
-            </div>
-            <!-- Controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="icon-prev"></span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="icon-next"></span>
-            </a>
-        </header>
+<!--首页大图-->
+<div class="container" style="margin-top:80px;background: #f2f2f2;">
+    <div class="row full col-lg-8 col-lg-offset-2">
+        $data.text
     </div>
 </div>
-
-<!--首页推荐-->
-<div class="container-fluid">
-    <div class="row full">
-        <div class="col-md-6">
-            <figure class="effect-zoe">
-                <img src="$data.left.url"/>
-                <figcaption>
-                    <h3>挚友资讯</h3>
-                    <p>$data.left.text</p>
-                    <a href="$data.left.href"></a>
-                </figcaption>
-            </figure>
-        </div><!--End Col 6-->
-
-        <div class="col-md-6">
-            <div class="col-md-12">
-                <figure class="effect-zoe">
-                    <img class="img-responsive" src="$data.rightMiddle.url"
-                         alt="Aurrion">
-                    <figcaption>
-                        <h3>剧本投递</h3>
-                        <p>$data.rightMiddle.text</p>
-                        <a href="/post.html"></a>
-                    </figcaption>
-                </figure>
-            </div>
-
-            <div class="col-md-12">
-                <figure class="effect-zoe">
-                    <img class="img-responsive"
-                         src="$data.rightBottom.url">
-                    <figcaption>
-                        <h3>挚友资讯</h3>
-                        <p>$data.rightBottom.text</p>
-                        <a href="$data.rightBottom.href"></a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div><!--End Col 6-->
-    </div><!--End Row-->
-</div>
-
-<!--回到顶端-->
 
 <!--页脚-->
 <div class="container-fluid">
@@ -183,10 +96,9 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="http://o9vd16zc6.bkt.clouddn.com/bootstrap.min.js"></script>
 
-
 <script>
-    $('.carousel').carousel({
-        interval: 3000 //changes the speed
+    $('#myCarousel').carousel({
+        interval: 5000 //changes the speed
     })
 </script>
 

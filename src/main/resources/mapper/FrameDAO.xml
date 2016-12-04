@@ -19,7 +19,7 @@
         <include refid="columns"/>
         from frame
         <include refid="byPageQuery"/>
-        order by time desc
+        order by id desc
         <if test="page != 0">
             limit #{startIndex}, #{count}
         </if>
@@ -39,8 +39,8 @@
     </select>
 
     <insert id="addFrame" parameterType="com.recklessmo.model.Page.Frame">
-        insert into frame(name, url, content, time, status, type)
-        values(#{name}, #{url}, #{content}, #{time}, #{status}, #{type})
+        insert into frame(id, name, url, content, time, status, type)
+        values(#{id}, #{name}, #{url}, #{content}, #{time}, #{status}, #{type})
     </insert>
 
     <update id="deleteFrame">
@@ -50,5 +50,9 @@
     <update id="updateContent">
         update frame set content = #{content} where id = #{id}
     </update>
+
+    <select id="getMaxId" resultType="java.lang.Integer">
+        select max(id) from frame
+    </select>
 
 </mapper>

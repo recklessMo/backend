@@ -30,7 +30,7 @@
         .state('app', {
             url: '/app',
             templateUrl: helper.basepath('app.html'),
-            resolve: helper.resolveFor('fastclick', 'modernizr', 'ui.select', 'icons', 'screenfull', 'animo', 'sparklines', 'slimscroll', 'classyloader', 'toaster', 'whirl','ngTable', 'oitozero.ngSweetAlert', 'ngDialog')
+            resolve: helper.resolveFor('fastclick', 'modernizr', 'ui.select', 'icons', 'screenfull', 'animo', 'sparklines', 'slimscroll', 'classyloader', 'toaster', 'whirl','ngTable', 'oitozero.ngSweetAlert', 'ngDialog', 'textAngular')
         })
         .state('app.account', {
             url: '/account',
@@ -48,6 +48,11 @@
             title: '页面管理',
             templateUrl: helper.basepath('custom/frame/frame-list.html'),
             resolve: helper.resolveFor('angucomplete-alt')
+        })
+        .state('app.post', {
+            url: '/post',
+            title: '剧本投递',
+            templateUrl: helper.basepath('custom/post/post-list.html'),
         })
         .state('page', {
             url: '/page',

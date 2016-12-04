@@ -26,7 +26,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="padding-left:10px;">
+            <a class="navbar-brand" href="/" style="padding-left:10px;">
                 <img src="./img/header3.png" alt="挚友传媒" height="50px"/>
             </a>
         </div>
@@ -37,8 +37,8 @@
                 <li><a href="/index.html" >首页</a></li>
                 <li><a href="/about.html">关于我们</a></li>
                 <li><a href="/movie-list.html" style="color:#477b39;">电影</a></li>
-                <li><a href="/movie-list1.html">电视剧</a></li>
-                <li><a href="/movie-list2.html">影视发行</a></li>
+                <li><a href="/series-list.html">电视剧</a></li>
+                <li><a href="/issue-list.html">影视发行</a></li>
                 <li><a href="/star-list.html">艺人经纪</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -58,35 +58,27 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <a href="/single-movie.html">
-                        <img class="img-responsive hidden-xs"
-                             src="http://www.jqpictures.com/uploads/image/20160905/1473073853.jpg"/>
-                        <img class="img-responsive visible-xs"
-                             src="http://visualsoldiers.com/img/work/fitradio/fitradio-featured-mobile.jpg"
-                             alt="Fit Radio">
+                    <a href="$data.firstHead.href">
+                        <img class="img-responsive"
+                             src="$data.firstHead.url"/>
                     </a>
 
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                    <a href="/single-movie.html">
-                        <img class="img-responsive hidden-xs"
-                             src="http://www.jqpictures.com/uploads/image/20160324/1458814620.jpg"/>
-                        <img class="img-responsive visible-xs"
-                             src="http://visualsoldiers.com/img/work/zegg/zegg-featured-mobile.jpg" alt="Fit Radio">
+                    <a href="$data.secondHead.href">
+                        <img class="img-responsive"
+                             src="$data.secondHead.url"/>
                     </a>
 
                     <div class="carousel-caption">
                     </div>
                 </div>
                 <div class="item">
-                    <a href="/single-movie.html">
-                        <img class="img-responsive hidden-xs"
-                             src="http://www.jqpictures.com/uploads/image/20160321/1458530017.jpg"/>
-                        <img class="img-responsive visible-xs"
-                             src="http://visualsoldiers.com/img/work/fitradio/fitradio-featured-mobile.jpg"
-                             alt="Fit Radio">
+                    <a href="$data.thirdHead.href">
+                        <img class="img-responsive"
+                             src="$data.thirdHead.url"/>
                     </a>
 
                     <div class="carousel-caption">
@@ -111,157 +103,67 @@
             <!--前面需要加箭头-->
             <h4 class="page-header">热映影片</h4>
         </div>
-        <div class="col-md-3 col-sm-6">
-            <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                <figure class="effect-zoe">
-                    <img  src="http://www.jqpictures.com/uploads/image/20160421/1461216337.jpg" alt="Plixis Screens"/>
-                    <figcaption>
-                        <h3>遇见最爱的人</h3>
-                        <p>上映时间: 2016-09-09</p>
-                        <a href="/single-movie.html">查看更多</a>
-                    </figcaption>
-                </figure>
+
+        #foreach($single in $data.filmList)
+            <div class="col-md-3 col-sm-6" style="margin-top:30px;">
+                <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
+                    <figure class="effect-zoe">
+                        <img  src="$single.url"/>
+                        <figcaption>
+                            <h3>$single.title</h3>
+                            <p>$single.text</p>
+                            <a href="$single.href">查看更多</a>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                <figure class="effect-zoe">
-                    <img  src="http://www.jqpictures.com/uploads/image/20160318/1458275514.png" alt="Plixis Screens"/>
-                    <figcaption>
-                        <h3>满城尽带黄金甲</h3>
-                        <p>上映时间: 2016-09-09</p>
-                        <a href="/single-movie.html">查看更多</a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                <figure class="effect-zoe">
-                    <img src="http://www.jqpictures.com/uploads/image/20160421/1461211744.jpg" alt="Plixis Screens"/>
-                    <figcaption>
-                        <h3>心花怒放</h3>
-                        <p>上映时间: 2016-09-09</p>
-                        <a href="/single-movie.html">查看更多</a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-            <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                <figure class="effect-zoe">
-                    <img src="http://www.jqpictures.com/uploads/image/20160421/1461211744.jpg" alt="Plixis Screens"/>
-                    <figcaption>
-                        <h3>心花怒放</h3>
-                        <p>上映时间: 2016-09-09</p>
-                        <a href="/single-movie.html">查看更多</a>
-                    </figcaption>
-                </figure>
-            </div>
-        </div>
+        #end
+
     </div>
 
     <div class="row">
         <div class="col-lg-12">
             <h4 class="page-header">挚友资讯</h4>
         </div>
-        <div class="col-lg-12">
-            <div class="col-md-4 col-sm-6">
-                <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                    <a href="/single-news.html">
-                        <img class="img-responsive img-portfolio img-hover"
-                             src="http://www.jqpictures.com/uploads/image/20160901/1472715599.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-6" style="height: 200px;">
-                <div class="news-title">
-                    <a href="">
-                        窦靖童首次银幕献声携手电影《七月与安生》
-                    </a>
-                </div>
-                <div class="news-time">
-                    2016-09-23
-                </div>
-                <div class="news-content">
-                    <p>
-                        由陈可辛、许月珍监制，曾国祥执导，周冬雨、马思纯、李程彬主演的电影《七月与安生》将于9月14日全国公映。近日，片方曝出电影主题歌海报，宣布歌手窦靖童亲自为电影创作并演唱的主题歌《 (It's not a crime) It's just what we do》将于明日（9月2日）正式上线。
-                    </p>
-                </div>
-                <div class="news-bottom">
-                    <a href="/single-news.html">
-                        更多
-                    </a>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-lg-12" style="margin-top:30px">
-            <div class="col-md-4 col-sm-6">
-                <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                    <a href="/single-news.html">
-                        <img class="img-responsive img-portfolio img-hover"
-                             src="http://www.jqpictures.com/uploads/image/20160901/1472715599.jpg" alt="">
-                    </a>
+        #foreach($single in $data.articleList)
+            <div class="col-lg-12" style="margin-top:50px;">
+                <div class="col-md-4 col-sm-6">
+                    <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
+                        <a href="$single.href">
+                            <img class="img-responsive img-portfolio img-hover"
+                                 src="$single.url" >
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6" style="height: 200px;">
+                    <div class="news-title">
+                        <a href="$single.href">
+                            $single.title
+                        </a>
+                    </div>
+                    <div class="news-time">
+                            $single.date
+                    </div>
+                    <div class="news-content">
+                        <p>
+                            $single.desc
+                        </p>
+                    </div>
+                    <div class="news-bottom">
+                        <a href="$single.href">
+                            更多
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-8 col-sm-6" style="height: 200px;">
-                <div class="news-title">
-                    <a href="">
-                        窦靖童首次银幕献声携手电影《七月与安生》
-                    </a>
-                </div>
-                <div class="news-time">
-                    2016-09-23
-                </div>
-                <div class="news-content">
-                    <p>
-                        由陈可辛、许月珍监制，曾国祥执导，周冬雨、马思纯、李程彬主演的电影《七月与安生》将于9月14日全国公映。近日，片方曝出电影主题歌海报，宣布歌手窦靖童亲自为电影创作并演唱的主题歌《 (It's not a crime) It's just what we do》将于明日（9月2日）正式上线。
-                    </p>
-                </div>
-                <div class="news-bottom">
-                    <a href="/single-news.html">
-                        更多
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-12" style="margin-top:30px">
-            <div class="col-md-4 col-sm-6">
-                <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
-                    <a href="/single-news.html">
-                        <img class="img-responsive img-portfolio img-hover"
-                             src="http://www.jqpictures.com/uploads/image/20160901/1472715599.jpg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-8 col-sm-6" style="height: 200px;">
-                <div class="news-title">
-                    <a href="">
-                        窦靖童首次银幕献声携手电影《七月与安生》
-                    </a>
-                </div>
-                <div class="news-time">
-                    2016-09-23
-                </div>
-                <div class="news-content">
-                    <p>
-                        由陈可辛、许月珍监制，曾国祥执导，周冬雨、马思纯、李程彬主演的电影《七月与安生》将于9月14日全国公映。近日，片方曝出电影主题歌海报，宣布歌手窦靖童亲自为电影创作并演唱的主题歌《 (It's not a crime) It's just what we do》将于明日（9月2日）正式上线。
-                    </p>
-                </div>
-                <div class="news-bottom">
-                    <a href="/single-news.html">
-                        更多
-                    </a>
-                </div>
-            </div>
-        </div>
+        #end
 
     </div>
 </div>
 
 <hr/>
+
 <!--页脚-->
 <div class="container-fluid">
     <div class="row" style="background: rgb(214, 217, 218);padding-top:20px;padding-bottom: 30px;">

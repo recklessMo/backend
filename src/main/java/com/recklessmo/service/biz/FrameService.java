@@ -44,4 +44,8 @@ public class FrameService {
         frameDAO.updateContent(id, content);
     }
 
+    public int getNextId(){
+        return frameDAO.getMaxId() + 1;
+    }
+
 }

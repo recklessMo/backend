@@ -6,6 +6,7 @@ import com.recklessmo.service.file.ImgService;
 import com.recklessmo.service.ftp.FtpUploadService;
 import com.recklessmo.web.webmodel.page.Page;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.dao.SystemWideSaltSource;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -48,13 +49,16 @@ public class ImgController {
         if(temp == null || temp.length() == 0){
             temp = fileName;
         }
+        int id = imgService.getMaxImgId() + 1;
+        String url = System.currentTimeMillis() +  "img" + id + ".jpg";
         InputStream inputStream = multipartFile.getInputStream();
-        ftpUploadService.uploadInputStreamByFtp("/www/upload", inputStream, fileName);
+        ftpUploadService.uploadInputStreamByFtp("/www/upload", inputStream, url);
         Img img = new Img();
+        img.setId(id);
         img.setName(temp);
         img.setFileName(fileName);
         img.setTime(new Date());
-        img.setUrl("/upload/" + fileName);
+        img.setUrl("/upload/" + url);
         imgService.addImg(img);
         return new JsonResponse(200, null, null);
     }

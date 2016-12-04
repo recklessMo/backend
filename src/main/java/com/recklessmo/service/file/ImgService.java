@@ -33,4 +33,8 @@ public class ImgService {
         imgDAO.deleteImg(id);
     }
 
+    public int getMaxImgId(){
+        return imgDAO.getMaxImgId();
+    }
+
 }

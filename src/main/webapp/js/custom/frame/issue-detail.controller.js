@@ -2,10 +2,10 @@
     'use strict';
     angular
         .module('custom')
-        .controller('FilmDetailController', FilmDetailController);
-    FilmDetailController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
+        .controller('IssueDetailController', IssueDetailController);
+    IssueDetailController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
 
-    function FilmDetailController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
+    function IssueDetailController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
@@ -15,7 +15,7 @@
         $scope.publish = function () {
             //todo判断是否都填写完整了?
             var data = $scope.obj;
-            CoverService.publishFilmDetail(data).success(function (data) {
+            CoverService.publishIssueDetail(data).success(function (data) {
                 if (data.status == 200) {
                     SweetAlert.success("发布成功!");
                     $scope.closeThisDialog();
@@ -46,30 +46,6 @@
             });
         }
 
-
-        //打开搜索跳转页面的窗口
-        $scope.searchPage = function (type) {
-            var dialog= ngDialog.open({
-                template: 'app/views/custom/frame/frame-list.html',
-                className: 'ngdialog-theme-default max-dialog',
-                controller: 'FrameListController',
-                data: {inDialog: true}
-            });
-            dialog.closePromise.then(function(data){
-                if(!data.value.status){
-                    return;
-                }
-                //不同的type对应不同位置的img
-                var url = data.value.url;
-                if(type === 1){
-                    _.set($scope.obj, 'firstHead.href', url);
-                }else if(type === 2){
-                    _.set($scope.obj, 'secondHead.href', url);
-                }else if(type === 3){
-                    _.set($scope.obj, 'thirdHead.href', url);
-                }
-            });
-        }
 
         //详细介绍
         $scope.introTableParams = new NgTableParams({}, {

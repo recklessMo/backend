@@ -6,19 +6,16 @@
     <title>挚友传媒</title>
     <meta name="description" content="挚友  挚友传媒 传媒 四川挚友传媒有限公司">
     <meta name="title" content="挚友传媒官方网站">
-
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="./css/styles.css"/>-->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css"/>
     <link rel="stylesheet" type="text/css" href="./css/index.css"/>
-    <!-- Custom Fonts -->
+    <link rel="shortcut icon" href="./img/logo.png"/>
     <link href="./font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <link rel="shortcut icon" href="./img/logo.png"/>
 </head>
 <!--<canvas style="position: absolute;z-index: -1;width: 100%;"></canvas>-->
 <body>
-
 <!--顶部的菜单栏-->
-<!--opacity 0.6-->
 <div class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
@@ -37,11 +34,11 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="menu" style="position:absolute;right:0;background: #FFF;">
             <ul class="nav navbar-nav" style="padding-top:30px;">
-                <li><a href="/index.html" style="color:#477b39;">首页</a></li>
+                <li><a href="/index.html" >首页</a></li>
                 <li><a href="/about.html">关于我们</a></li>
                 <li><a href="/movie-list.html">电影</a></li>
                 <li><a href="/series-list.html">电视剧</a></li>
-                <li><a href="/issue-list.html">影视发行</a></li>
+                <li><a href="/issue-list.html" style="color:#477b39;">影视发行</a></li>
                 <li><a href="/star-list.html">艺人经纪</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
@@ -99,49 +96,73 @@
     </div>
 </div>
 
-<!--首页推荐-->
-<div class="container-fluid">
-    <div class="row full">
-        <div class="col-md-6">
-            <figure class="effect-zoe">
-                <img src="$data.left.url"/>
-                <figcaption>
-                    <h3>挚友资讯</h3>
-                    <p>$data.left.text</p>
-                    <a href="$data.left.href"></a>
-                </figcaption>
-            </figure>
-        </div><!--End Col 6-->
+<!--中间影片-->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <!--前面需要加箭头-->
+            <h4 class="page-header">热映影片</h4>
+        </div>
 
-        <div class="col-md-6">
-            <div class="col-md-12">
-                <figure class="effect-zoe">
-                    <img class="img-responsive" src="$data.rightMiddle.url"
-                         alt="Aurrion">
-                    <figcaption>
-                        <h3>剧本投递</h3>
-                        <p>$data.rightMiddle.text</p>
-                        <a href="/post.html"></a>
-                    </figcaption>
-                </figure>
+        #foreach($single in $data.filmList)
+            <div class="col-md-3 col-sm-6" style="margin-top:30px;">
+                <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
+                    <figure class="effect-zoe">
+                        <img  src="$single.url"/>
+                        <figcaption>
+                            <h3>$single.title</h3>
+                            <p>$single.text</p>
+                            <a href="$single.href">查看更多</a>
+                        </figcaption>
+                    </figure>
+                </div>
             </div>
+        #end
 
-            <div class="col-md-12">
-                <figure class="effect-zoe">
-                    <img class="img-responsive"
-                         src="$data.rightBottom.url">
-                    <figcaption>
-                        <h3>挚友资讯</h3>
-                        <p>$data.rightBottom.text</p>
-                        <a href="$data.rightBottom.href"></a>
-                    </figcaption>
-                </figure>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h4 class="page-header">挚友资讯</h4>
+        </div>
+
+        #foreach($single in $data.articleList)
+            <div class="col-lg-12" style="margin-top:50px;">
+                <div class="col-md-4 col-sm-6">
+                    <div style="box-shadow: 0 1px 14px 0 rgba(0,0,0,0.37)">
+                        <a href="$single.href">
+                            <img class="img-responsive img-portfolio img-hover"
+                                 src="$single.url" >
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-6" style="height: 200px;">
+                    <div class="news-title">
+                        <a href="$single.href">
+                            $single.title
+                        </a>
+                    </div>
+                    <div class="news-time">
+                            $single.date
+                    </div>
+                    <div class="news-content">
+                        <p>
+                            $single.desc
+                        </p>
+                    </div>
+                    <div class="news-bottom">
+                        <a href="$single.href">
+                            更多
+                        </a>
+                    </div>
+                </div>
             </div>
-        </div><!--End Col 6-->
-    </div><!--End Row-->
+        #end
+
+    </div>
 </div>
 
-<!--回到顶端-->
+<hr/>
 
 <!--页脚-->
 <div class="container-fluid">
@@ -183,10 +204,39 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="http://o9vd16zc6.bkt.clouddn.com/bootstrap.min.js"></script>
 
+<script type="text/x-handlebars-template" id="waterfall-tpl">
+    {{#result}}
+    <div class="single-item">
+        <figure class="effect-zoe">
+            <img src="{{image}}" width="{{width}}" height="{{height}}"/>
+            <figcaption>
+            <h3>卧虎藏龙</h3>
+            <p>1998年上映</p>
+            <a href="/single-movie.html">查看详细</a>
+            </figcaption>
+        </figure>
+    </div>
+    {{/result}}
+</script>
+<script src="js/handlebars.js"></script>
+<script src="js/waterfall.min.js"></script>
+<script>
+    $('#container-fluid').waterfall({
+        itemCls: 'single-item',
+        colWidth: 192,
+        gutterWidth: 0,
+        gutterHeight: 0,
+        checkImagesLoaded: false,
+        maxPage: 1,
+        path: function(page) {
+            return 'data' + page + '.js';
+        }
+    });
+</script>
 
 <script>
-    $('.carousel').carousel({
-        interval: 3000 //changes the speed
+    $('#myCcarousel').carousel({
+        interval: 5000 //changes the speed
     })
 </script>
 

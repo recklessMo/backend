@@ -17,5 +17,6 @@ public interface FrameDAO {
     void updateContent(@Param("id")long id, @Param("content") String content);
     void deleteFrame(@Param("id") long id);
     Frame getById(@Param("id")long id);
+    int getMaxId();
 
 }

@@ -31,12 +31,16 @@
     </select>
 
     <insert id="addImg" parameterType = "com.recklessmo.model.img.Img">
-        insert into img(name, file_name, time, url)
-        values(#{name}, #{fileName}, #{time}, #{url})
+        insert into img(id, name, file_name, time, url)
+        values(#{id}, #{name}, #{fileName}, #{time}, #{url})
     </insert>
 
     <update id="deleteImg">
         delete from img where id = #{id} limit 1
     </update>
+
+    <select id="getMaxImgId" resultType="java.lang.Integer">
+        select ifnull(max(id), 0) from img;
+    </select>
 
 </mapper>

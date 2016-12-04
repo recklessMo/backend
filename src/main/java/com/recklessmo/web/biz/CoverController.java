@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.Date;
 
 /**
  *
@@ -126,5 +127,171 @@ public class CoverController {
         }
         return new JsonResponse(200, null, null);
     }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/filmDetail", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishFilmDetail(@RequestBody FilmDetailPage page){
+        VelocityContext context = new VelocityContext();
+        long pageId = page.getId();
+        Frame frame;
+        try {
+            context.put("data", page);
+            if(pageId == 0 ){
+                pageId = frameService.getNextId();
+                page.setId(pageId);
+                frame = new Frame();
+                frame.setId(pageId);
+                frame.setName("电影:" + page.getHeadTitle());
+                frame.setType("电影详情");
+                frame.setContent(JSONObject.toJSONString(page));
+                frame.setStatus(1);
+                frame.setTime(new Date());
+                frame.setUrl("/film-detail" + pageId + ".html");
+                frameService.insert(frame);
+            }else {
+                frame = frameService.getById(pageId);
+                frameService.updateContent(pageId, JSONObject.toJSONString(page));
+            }
+            String content = templateService.getTemplate(context, "/templates/film-detail.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, frame.getUrl().substring(1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/seriesDetail", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishSeriesDetail(@RequestBody FilmDetailPage page){
+        VelocityContext context = new VelocityContext();
+        long pageId = page.getId();
+        Frame frame;
+        try {
+            context.put("data", page);
+            if(pageId == 0 ){
+                pageId = frameService.getNextId();
+                page.setId(pageId);
+                frame = new Frame();
+                frame.setId(pageId);
+                frame.setName("电视剧:" + page.getHeadTitle());
+                frame.setType("电视剧详情");
+                frame.setContent(JSONObject.toJSONString(page));
+                frame.setStatus(1);
+                frame.setTime(new Date());
+                frame.setUrl("/series-detail" + pageId + ".html");
+                frameService.insert(frame);
+            }else {
+                frame = frameService.getById(pageId);
+                frameService.updateContent(pageId, JSONObject.toJSONString(page));
+            }
+            String content = templateService.getTemplate(context, "/templates/series-detail.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, frame.getUrl().substring(1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/issueDetail", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishIssueDetail(@RequestBody FilmDetailPage page){
+        VelocityContext context = new VelocityContext();
+        long pageId = page.getId();
+        Frame frame;
+        try {
+            context.put("data", page);
+            if(pageId == 0 ){
+                pageId = frameService.getNextId();
+                page.setId(pageId);
+                frame = new Frame();
+                frame.setId(pageId);
+                frame.setName("发行:" + page.getHeadTitle());
+                frame.setType("发行详情");
+                frame.setContent(JSONObject.toJSONString(page));
+                frame.setStatus(1);
+                frame.setTime(new Date());
+                frame.setUrl("/issue-detail" + pageId + ".html");
+                frameService.insert(frame);
+            }else {
+                frame = frameService.getById(pageId);
+                frameService.updateContent(pageId, JSONObject.toJSONString(page));
+            }
+            String content = templateService.getTemplate(context, "/templates/issue-detail.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, frame.getUrl().substring(1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/starDetail", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishStarDetail(@RequestBody StarDetailPage page){
+        VelocityContext context = new VelocityContext();
+        long pageId = page.getId();
+        Frame frame;
+        try {
+            context.put("data", page);
+            if(pageId == 0 ){
+                pageId = frameService.getNextId();
+                page.setId(pageId);
+                frame = new Frame();
+                frame.setId(pageId);
+                frame.setName("艺人:" + page.getName());
+                frame.setType("艺人详情");
+                frame.setContent(JSONObject.toJSONString(page));
+                frame.setStatus(1);
+                frame.setTime(new Date());
+                frame.setUrl("/star-detail" + pageId + ".html");
+                frameService.insert(frame);
+            }else {
+                frame = frameService.getById(pageId);
+                frameService.updateContent(pageId, JSONObject.toJSONString(page));
+            }
+            String content = templateService.getTemplate(context, "/templates/star-detail.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, frame.getUrl().substring(1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
+    @PreAuthorize("hasAnyAuthority('login')")
+    @RequestMapping(value = "/newsDetail", method = {RequestMethod.POST, RequestMethod.GET})
+    @ResponseBody
+    public JsonResponse publishNewsDetail(@RequestBody NewsDetailPage page){
+        VelocityContext context = new VelocityContext();
+        long pageId = page.getId();
+        Frame frame;
+        try {
+            context.put("data", page);
+            if(pageId == 0 ){
+                pageId = frameService.getNextId();
+                page.setId(pageId);
+                frame = new Frame();
+                frame.setId(pageId);
+                frame.setName("资讯:" + page.getTitle());
+                frame.setType("资讯详情");
+                frame.setContent(JSONObject.toJSONString(page));
+                frame.setStatus(1);
+                frame.setTime(new Date());
+                frame.setUrl("/news-detail" + pageId + ".html");
+                frameService.insert(frame);
+            }else {
+                frame = frameService.getById(pageId);
+                frameService.updateContent(pageId, JSONObject.toJSONString(page));
+            }
+            String content = templateService.getTemplate(context, "/templates/news-detail.vm");
+            ftpUploadService.uploadFileByFtp("/www", content, frame.getUrl().substring(1));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return new JsonResponse(200, null, null);
+    }
+
 
 }

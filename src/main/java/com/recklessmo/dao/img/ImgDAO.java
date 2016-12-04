@@ -15,5 +15,6 @@ public interface ImgDAO {
     int listImgsCount(Page page);
     void addImg(Img img);
     void deleteImg(@Param("id")long id);
+    int getMaxImgId();
 
 }

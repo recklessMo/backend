@@ -2,10 +2,10 @@
     'use strict';
     angular
         .module('custom')
-        .controller('FilmDetailController', FilmDetailController);
-    FilmDetailController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
+        .controller('NewsDetailController', NewsDetailController);
+    NewsDetailController.$inject = ['$scope', 'CoverService', 'SweetAlert', 'NgTableParams', 'ngDialog', 'blockUI', 'Notify'];
 
-    function FilmDetailController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
+    function NewsDetailController($scope, CoverService, SweetAlert, NgTableParams, ngDialog, blockUI, Notify) {
 
         //当前使用的数据
         $scope.obj = JSON.parse($scope.ngDialogData.item.content);
@@ -15,7 +15,7 @@
         $scope.publish = function () {
             //todo判断是否都填写完整了?
             var data = $scope.obj;
-            CoverService.publishFilmDetail(data).success(function (data) {
+            CoverService.publishNewsDetail(data).success(function (data) {
                 if (data.status == 200) {
                     SweetAlert.success("发布成功!");
                     $scope.closeThisDialog();

@@ -25,7 +25,7 @@
         <table ng-table="imgTableParams" class="table table-bordered table-hover table-condensed editable-table table-min">
             <tr ng-repeat="item in $data" ng-dblclick="show(item.id)">
                 <td data-title="'标记'" style="text-align: center">{{item.name}}</td>
-                <td data-title="'文件名'" style="text-align: center">{{item.fileName}}</td>
+                <td data-title="'链接'" style="text-align: center">http://www.zhiyouchuanmei.com{{item.url}}</td>
                 <td data-title="'上传时间'" style="text-align: center">{{item.time | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
                 <td data-title="'操作'" style="text-align: center">
                     <button class="btn btn-info" ng-click="choose(item)" ng-if="inDialog">选择</button>

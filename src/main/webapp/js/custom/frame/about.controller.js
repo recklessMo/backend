@@ -57,6 +57,8 @@
                     $scope.obj.firstImg = url;
                 }else if(type === 2){
                     $scope.obj.secondImg = url;
+                } else if(type === 3){
+                    $scope.obj.officeImg = url;
                 }
             });
         }
@@ -99,6 +101,26 @@
         $scope.deleteTeamPicItem = function(row){
             $scope.obj.teamPicList = _.without($scope.obj.teamPicList , row);
             $scope.teamPicTableParams.reload();
+        }
+
+        //项目合作
+        $scope.workTableParams = new NgTableParams({}, {
+            counts:[],
+            getData: function($defer, params){
+                if(!$scope.obj.workList){
+                    $scope.obj.workList = [];
+                }
+                $defer.resolve($scope.obj.workList);
+            }
+        });
+
+        $scope.addWorkItem = function(data){
+            $scope.obj.workList.push(data);
+        }
+
+        $scope.deleteWorkItem = function(row){
+            $scope.obj.workList = _.without($scope.obj.workList , row);
+            $scope.workTableParams.reload();
         }
 
         //在img里面进行设置

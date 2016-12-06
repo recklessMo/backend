@@ -100,12 +100,10 @@
                 <h2 class="about-content1">四川挚友文化传播有限公司是一家拥有业内资深专业团队、丰富运营经验及成功案例的影业公司。业务板块主要包括影视制作、影视投资、宣传发行、VR影视内容制作、艺人经纪等。
                     2015年初，公司开始进行战略转型和股权重组，引进景邦基金作为股东；2015年下旬，公司引入乐道资本，2016年初，公司又引入纪源资本等股东，经过三轮增资，公司重新梳理行业资源、重塑业务布局、重构核心团队，为后续快速发展打下坚实基础。2015年开始，公司业务重心瞄准国内整个电影产业并发力，先后投资、制作多部院线电影作品。</h2>
                 <div class="row" style="max-width: 800px;margin:0 auto;">
-                    <div class="col-md-6" style="padding-right:30px;">
-                        <h2 class="about-content1" style="text-indent: 2em;">旗下的电影发行公司——绽放影业以电影营销和发行为核心竞争力，目前公司已投资出品《奔爱》、《不可思议》、《宝贝当家》等院线电影，16年引进发行了印度电影《巴霍巴利王》该片号称是印度最贵的电影——耗资1亿6000万人民币，上映首日获得780万美元的票房，打破多项纪录，其辉煌业绩使其成为当之无愧的国内影视行业新兴之星。同时，挚友影业致力于电影全产业链的整合与拓展，投资拍摄了《风云九州》系列、《有为青年》、《独臂悍将贺炳炎》、《血战》、《泡芙小姐1》、《最后的说书人》《小静的奔跑》《一球定乾坤》、《大数据男友》、《峰回路转》等多类型影片，成功跻身电影投资制作的领跑行列。
-                            <br/><br/>挚友影业通过杰出的创意策划能力、强大的活动执行力以及稳定的影院渠道关系为众多合作伙伴带来了电影领域的品牌传播体验；公司成立至今，与多位影视明星签订合作，迅速成长为颇有号召力的明星经纪公司之一。
-                        </h2>
+                    <div class="col-md-4" style="padding-right:30px;">
+                        <h2 class="about-content1" style="text-indent: 2em;">旗下的电影发行公司——绽放影业以电影营销和发行为核心竞争力，目前公司已投资出品《奔爱》、《不可思议》、《宝贝当家》等院线电影，16年引进发行了印度电影《巴霍巴利王》该片号称是印度最贵的电影——耗资1亿6000万人民币，上映首日获得780万美元的票房，打破多项纪录，其辉煌业绩使其成为当之无愧的国内影视行业新兴之星。同时，挚友影业致力于电影全产业链的整合与拓展，投资拍摄了《风云九州》系列、《有为青年》、《独臂悍将贺炳炎》、《血战》、《泡芙小姐1》、《最后的说书人》《小静的奔跑》《一球定乾坤》、《大数据男友》、《峰回路转》等多类型影片，成功跻身电影投资制作的领跑行列。</h2>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-8" style="padding:0 20px 0 20px;">
                         <div class="row" style="margin:0;">
                             <div class="col-sm-4">
                                 <img width="100%" height="auto" src="/upload/1480827559990img8.jpg"/>
@@ -124,7 +122,11 @@
                         </div>
                     </div>
                 </div>
-                <h2 class="about-content">挚友影业立足于本土市场的发展，每年稳定出品投资电影作品，以及专为视频网站打造的优质网络剧，形成以内容制作为主，线上线下营销一体化的“多屏时代”内容供应商。</h2>
+                <h2 class="about-content1" style="margin-top:30px;">挚友影业立足于本土市场的发展，每年稳定出品投资电影作品，以及专为视频网站打造的优质网络剧，形成以内容制作为主，线上线下营销一体化的“多屏时代”内容供应商。</h2>
+                <img style="max-width:750px;margin:0 auto;" class="img-responsive" src="$data.officeImg" width="100%" height="auto"/>
+                <h2 class="about-content" style="margin-top:30px;">
+                    挚友影业通过杰出的创意策划能力、强大的活动执行力以及稳定的影院渠道关系为众多合作伙伴带来了电影领域的品牌传播体验；公司成立至今，与多位影视明星签订合作，迅速成长为颇有号召力的明星经纪公司之一。
+                </h2>
             </div>
             <div class="content-block">
                 <div class="sub-title">
@@ -184,9 +186,13 @@
                         <h3 class="colorgrey">项目合作</h3>
                     </span>
                 </div>
-                <p style="font-size: 16px;">
-                    $data.corpText
-                </p>
+                #foreach($single in $data.workList)
+                    <div style="text-align: center;">
+                        <p style="font-size: 16px;">
+                            $single.intro
+                        </p>
+                    </div>
+                #end
             </div>
             <div class="contact-form">
                 <div class="sub-title">

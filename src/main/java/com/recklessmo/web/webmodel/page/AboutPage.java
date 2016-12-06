@@ -10,11 +10,30 @@ public class AboutPage {
     private String firstImg;
     private String secondImg;
     private String companyIntro;
+    private String officeImg;
+    private List<IntroObject> workList;
     private List<PeopleObject> leaderPicList;
     private List<PeopleObject> teamPicList;
     private String companyCulture;
     private String corpText;
     private String resumePost;
+
+
+    public List<IntroObject> getWorkList() {
+        return workList;
+    }
+
+    public void setWorkList(List<IntroObject> workList) {
+        this.workList = workList;
+    }
+
+    public String getOfficeImg() {
+        return officeImg;
+    }
+
+    public void setOfficeImg(String officeImg) {
+        this.officeImg = officeImg;
+    }
 
     public String getSecondImg() {
         return secondImg;

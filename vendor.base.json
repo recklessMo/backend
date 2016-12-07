@@ -33,5 +33,8 @@
   "bower_components/ladda/dist/ladda.jquery.min.js",
   "bower_components/angular-ladda/dist/angular-ladda.js",
   "bower_components/lodash/dist/lodash.min.js",
-  "node_modules/echarts/dist/echarts.min.js"
+  "node_modules/echarts/dist/echarts.min.js",
+  "bower_components/textAngular/dist/textAngular-rangy.min.js",
+  "bower_components/textAngular/dist/textAngular-sanitize.min.js",
+  "bower_components/textAngular/dist/textAngular.min.js"
 ]

@@ -30,7 +30,7 @@
         .state('app', {
             url: '/app',
             templateUrl: helper.basepath('app.html'),
-            resolve: helper.resolveFor('fastclick', 'modernizr', 'ui.select', 'icons', 'screenfull', 'animo', 'sparklines', 'slimscroll', 'classyloader', 'toaster', 'whirl','ngTable', 'oitozero.ngSweetAlert', 'ngDialog')
+            resolve: helper.resolveFor('fastclick', 'modernizr', 'ui.select', 'icons', 'screenfull', 'animo', 'sparklines', 'slimscroll', 'classyloader', 'toaster', 'whirl','ngTable', 'oitozero.ngSweetAlert', 'ngDialog','filestyle','angularFileUpload')
         })
         .state('app.account', {
             url: '/account',
@@ -40,8 +40,7 @@
         .state('app.upload', {
             url: '/upload',
             title: '文件上传',
-            templateUrl: helper.basepath('custom/admin/img/img-list.html'),
-            resolve: helper.resolveFor('angularFileUpload', 'filestyle')
+            templateUrl: helper.basepath('custom/admin/img/img-list.html')
         })
         .state('app.frame', {
             url: '/cover',

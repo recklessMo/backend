@@ -69,8 +69,7 @@
             <ul class="nav navbar-nav" style="padding-top:30px;">
                 <li><a href="/index.html" >首页</a></li>
                 <li><a href="/about.html">关于我们</a></li>
-                <li><a href="/movie-list.html">电影</a></li>
-                <li><a href="/series-list.html">电视剧</a></li>
+                <li><a href="/movie-list.html">影视剧</a></li>
                 <li><a href="/issue-list.html">影视发行</a></li>
                 <li><a href="/star-list.html" style="color:#477b39;">艺人经纪</a></li>
             </ul>

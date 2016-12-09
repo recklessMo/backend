@@ -41,6 +41,7 @@
                 <td data-title="'上传时间'" style="text-align: center">{{item.time | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
                 <td data-title="'操作'" style="text-align: center">
                     <button class="btn btn-info" ng-click="choose(item)" ng-if="inDialog">选择</button>
+                    <a class="btn btn-info" target="_blank" ng-href="{{'http://www.zhiyouchuanmei.com' + item.url}}" ng-if="!inDialog">预览</a>
                     <button class="btn btn-info" ng-click="edit(item)" ng-if="!inDialog">修改</button>
                     <button class="btn btn-danger" ng-click="delete(item.id)" ng-if="item.status!=0 && !inDialog">删除</button>
                 </td>

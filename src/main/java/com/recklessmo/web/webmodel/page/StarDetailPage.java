@@ -13,21 +13,56 @@ public class StarDetailPage {
 
     private String firstLeft;
     private String firstRight;
+    private String firstTitle;
     private String firstText;
 
     private String secondLeft;
     private String secondRight;
+    private String secondTitle;
     private String secondText;
 
     private String thirdLeft;
     private String thirdMiddle;
     private String thirdRight;
+    private String thirdTitle;
     private String thirdText;
 
     private String fourthLeft;
     private String fourthRight;
+    private String fourthTitle;
     private String fourthText;
 
+    public String getFirstTitle() {
+        return firstTitle;
+    }
+
+    public void setFirstTitle(String firstTitle) {
+        this.firstTitle = firstTitle;
+    }
+
+    public String getSecondTitle() {
+        return secondTitle;
+    }
+
+    public void setSecondTitle(String secondTitle) {
+        this.secondTitle = secondTitle;
+    }
+
+    public String getThirdTitle() {
+        return thirdTitle;
+    }
+
+    public void setThirdTitle(String thirdTitle) {
+        this.thirdTitle = thirdTitle;
+    }
+
+    public String getFourthTitle() {
+        return fourthTitle;
+    }
+
+    public void setFourthTitle(String fourthTitle) {
+        this.fourthTitle = fourthTitle;
+    }
 
     public String getName() {
         return name;

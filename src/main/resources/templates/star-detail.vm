@@ -84,9 +84,9 @@
 
 
                     <footer class="entry-footer">
-                        <h2 class="entry-title">出生于1987年</h2>
+                        <h2 class="entry-title">$data.firstTitle</h2>
 
-                        <p>从小学习音乐和表演</p>
+                        <p>$data.firstText</p>
                     </footer><!-- .entry-footer -->
 
                 </article><!-- #post- -->
@@ -104,9 +104,9 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer">
-                        <h2 class="entry-title">出生于1987年</h2>
+                        <h2 class="entry-title">$data.secondTitle</h2>
 
-                        <p>从小学习音乐和表演</p>
+                        <p>$data.secondText</p>
                     </footer><!-- .entry-footer -->
 
                 </article><!-- #post--->
@@ -128,9 +128,9 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer">
-                        <h2 class="entry-title">出生于1987年</h2>
+                        <h2 class="entry-title">$data.thirdTitle</h2>
 
-                        <p>从小学习音乐和表演</p>
+                        <p>$data.thirdText</p>
                     </footer><!-- .entry-footer -->
 
                 </article><!-- #post -->
@@ -151,8 +151,8 @@
                     </div><!-- .entry-content -->
 
                     <footer class="entry-footer">
-                        <h2 class="entry-title">出生于1987年</h2>
-                        <p>从小学习音乐和表演</p>
+                        <h2 class="entry-title">$data.fourthTitle</h2>
+                        <p>$data.fourthText</p>
                     </footer><!-- .entry-footer -->
 
                 </article><!-- #post -->

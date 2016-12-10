@@ -100,7 +100,7 @@
     <div class="row">
         <div class="col-lg-12">
             <!--前面需要加箭头-->
-            <h4 class="page-header">热映影片</h4>
+            <h4 class="page-header" style="font-size:27px;font-weight: bold;">&#10149热映影片</h4>
         </div>
 
         #foreach($single in $data.filmList)
@@ -122,7 +122,7 @@
 
     <div class="row">
         <div class="col-lg-12">
-            <h4 class="page-header">挚友资讯</h4>
+            <h4 class="page-header" style="font-size:27px;font-weight: bold;">&#10149挚友资讯</h4>
         </div>
 
         #foreach($single in $data.articleList)

@@ -1,5 +1,7 @@
 package com.recklessmo.web.webmodel.page;
 
+import java.util.List;
+
 /**
  * Created by hpf on 11/30/16.
  */
@@ -9,6 +11,16 @@ public class ImgObject {
     private String title;
     private String text;
     private String href;
+
+    private List<String> introList;
+
+    public List<String> getIntroList() {
+        return introList;
+    }
+
+    public void setIntroList(List<String> introList) {
+        this.introList = introList;
+    }
 
     public String getTitle() {
         return title;

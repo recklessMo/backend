@@ -110,12 +110,14 @@
         预告片
     </div>
     <div class="row full" style="margin-top:20px;">
-        $data.video
+        $!data.video
     </div>
 
-    <div class="movie-gap" style="margin-top:20px;">
-        精彩影评
-    </div>
+    #if($data.commentList.size() > 0)
+        <div class="movie-gap" style="margin-top:20px;">
+            精彩影评
+        </div>
+    #end
     <div style="margin-top:20px;" class="waterfall">
         #foreach($single in $data.commentList)
             <div>

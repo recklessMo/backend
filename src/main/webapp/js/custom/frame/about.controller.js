@@ -123,6 +123,26 @@
             $scope.workTableParams.reload();
         }
 
+        //简历投递
+        $scope.resumeTableParams = new NgTableParams({}, {
+            counts:[],
+            getData: function($defer, params){
+                if(!$scope.obj.resumeList){
+                    $scope.obj.resumeList = [];
+                }
+                $defer.resolve($scope.obj.resumeList);
+            }
+        });
+
+        $scope.addResumeItem = function(data){
+            $scope.obj.resumeList.push(data);
+        }
+
+        $scope.deleteResumeItem = function(row){
+            $scope.obj.resumeList = _.without($scope.obj.resumeList , row);
+            $scope.resumeTableParams.reload();
+        }
+
         //在img里面进行设置
         $scope.searchImgInRow = function(row){
             var dialog= ngDialog.open({

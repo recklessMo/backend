@@ -17,7 +17,15 @@ public class AboutPage {
     private String companyCulture;
     private String corpText;
     private String resumePost;
+    private List<IntroObject> resumeList;
 
+    public List<IntroObject> getResumeList() {
+        return resumeList;
+    }
+
+    public void setResumeList(List<IntroObject> resumeList) {
+        this.resumeList = resumeList;
+    }
 
     public List<IntroObject> getWorkList() {
         return workList;

@@ -123,15 +123,27 @@
             </table>
         </div>
 
+        <!--详细介绍-->
         <div class="col-md-12" style="margin-top:20px;">
-            <div class="col-md-2" style="margin-top:6px;">
+            <div class="col-md-4" style="margin-top:6px;">
                 第七部分简历投递
-            </div>
-            <div class="col-md-10">
-                <input ng-model="obj.resumePost" class="form-control" placeholder="建议外部编写好后复制粘贴过来~"/>
+                <button class="btn btn-info" ng-click="addResumeItem({})">添加</button>
             </div>
         </div>
 
+        <div class="col-md-12" style="margin-top:20px;">
+            <table ng-table="resumeTableParams"
+                   class="table table-bordered table-hover table-condensed editable-table none-padding-table">
+                <tr ng-repeat="row in $data">
+                    <td title="'操作'">
+                        <button class="btn btn-link btn-sm" ng-click="deleteResumeItem(row)">删除</button>
+                    </td>
+                    <td title="'内容'">
+                        <input ng-model="row.intro" class="form-control" type="text"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
         <div class="col-md-12 text-center" style="margin-top:20px;">
             <button class="btn btn-info" ng-click="publish()">发布</button>

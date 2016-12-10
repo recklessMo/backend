@@ -28,6 +28,7 @@
                 <td data-title="'链接'" style="text-align: center">http://www.zhiyouchuanmei.com{{item.url}}</td>
                 <td data-title="'上传时间'" style="text-align: center">{{item.time | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
                 <td data-title="'操作'" style="text-align: center">
+                    <a class="btn btn-info" target="_blank" ng-href="{{'http://www.zhiyouchuanmei.com' + item.url}}">预览</a>
                     <button class="btn btn-info" ng-click="choose(item)" ng-if="inDialog">选择</button>
                     <button class="btn btn-danger" ng-click="delete(item.id)">删除</button>
                 </td>

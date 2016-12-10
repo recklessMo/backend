@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  *
@@ -118,6 +120,16 @@ public class CoverController {
     public JsonResponse publishStarList(@RequestBody StarListPage page){
         VelocityContext context = new VelocityContext();
         try {
+            for(ImgObject imgObject : page.getStarList()){
+                List<String> introList = new LinkedList<>();
+                if(imgObject.getText() != null) {
+                    String[] data = imgObject.getText().split("&&");
+                    for(String temp : data){
+                        introList.add(temp.trim());
+                    }
+                    imgObject.setIntroList(introList);
+                }
+            }
             context.put("data", page);
             frameService.updateContent(6, JSONObject.toJSONString(page));
             String content = templateService.getTemplate(context, "/templates/star-list.vm");

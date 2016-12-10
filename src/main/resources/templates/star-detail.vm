@@ -76,7 +76,7 @@
 
                     <div class="entry-content layout-14">
                         <div class="panel top alignnone wp-image-214 size-full" href=""
-                           style="background-image: url($data.firstLeft)"
+                           style="box-shadow:none;background-image: url($data.firstLeft)"
                            title="1"></div>
                         <div class="panel top alignnone wp-image-633 size-full" href=""
                                             style="background-image: url($data.firstRight)"></div>

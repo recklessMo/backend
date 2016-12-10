@@ -49,9 +49,11 @@
 </div>
 
 <!--首页大图-->
-<div class="container" style="margin-top:80px;background: #f2f2f2;">
-    <div class="row full col-lg-8 col-lg-offset-2">
-        $data.text
+<div class="container-fluid" style="margin-top:80px;">
+    <div class="row full" style="background: #f2f2f2;">
+        <div class="col-lg-8 col-lg-offset-2">
+            $data.text
+        </div>
     </div>
 </div>
 

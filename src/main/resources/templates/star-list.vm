@@ -88,7 +88,7 @@
                         <figcaption style="opacity: 0.8;">
                             <h3 style="text-align: left;">$single.title</h3>
                             #foreach($text in $single.introList)
-                                <p style="text-align:left;margin:0;font-family: 微软雅黑;">$text</p>
+                                <p style="text-align:left;margin:0;font-family: 微软雅黑;font-style: normal;">$text</p>
                             #end
                             <a href="$single.href">详情</a>
                         </figcaption>

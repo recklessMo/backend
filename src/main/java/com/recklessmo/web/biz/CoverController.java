@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -72,6 +73,7 @@ public class CoverController {
     public JsonResponse publishMovieList(@RequestBody MovieListPage page){
         VelocityContext context = new VelocityContext();
         try {
+            Collections.sort(page.getArticleList(), (o2, o1)->o1.getDate().compareTo(o2.getDate()));
             context.put("data", page);
             frameService.updateContent(3, JSONObject.toJSONString(page));
             String content = templateService.getTemplate(context, "/templates/movie-list.vm");
@@ -88,6 +90,7 @@ public class CoverController {
     public JsonResponse publishSeriesList(@RequestBody SeriesListPage page){
         VelocityContext context = new VelocityContext();
         try {
+            Collections.sort(page.getArticleList(), (o2, o1)->o1.getDate().compareTo(o2.getDate()));
             context.put("data", page);
             frameService.updateContent(4, JSONObject.toJSONString(page));
             String content = templateService.getTemplate(context, "/templates/series-list.vm");
@@ -104,6 +107,7 @@ public class CoverController {
     public JsonResponse publishIssueList(@RequestBody SeriesListPage page){
         VelocityContext context = new VelocityContext();
         try {
+            Collections.sort(page.getArticleList(), (o2, o1)->o1.getDate().compareTo(o2.getDate()));
             context.put("data", page);
             frameService.updateContent(5, JSONObject.toJSONString(page));
             String content = templateService.getTemplate(context, "/templates/issue-list.vm");

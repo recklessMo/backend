@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/" style="padding-left:10px;">
-                <img src="./img/header4.png" alt="挚友传媒" height="50px"/>
+                <img src="./img/header5.png" alt="挚友传媒" height="50px"/>
             </a>
         </div>
 
@@ -96,14 +96,13 @@
                 <h1>about us</h1>
             </div>
             <div class="page-cover-content">
-                <h2 class="about-content1" style="max-width: 800px;font-size:15px;text-align: left;">四川挚友文化传播有限公司是一家拥有业内资深专业团队、丰富运营经验及成功案例的影业公司。业务板块主要包括影视制作、影视投资、宣传发行、VR影视内容制作、艺人经纪等。
-                    2015年初，公司开始进行战略转型和股权重组，引进景邦基金作为股东；2015年下旬，公司引入乐道资本，2016年初，公司又引入纪源资本等股东，经过三轮增资，公司重新梳理行业资源、重塑业务布局、重构核心团队，为后续快速发展打下坚实基础。2015年开始，公司业务重心瞄准国内整个电影产业并发力，先后投资、制作多部院线电影作品。</h2>
+                <h2 class="about-content1" style="max-width: 800px;font-size:15px;text-align: left;">
+                    四川挚友传媒有限公司公司成立于2011年，是一家业务涉及影视投资、制作、IP孵化、院线发行和演艺经纪于一身的综合性影视公司。公司整合了影视界专业人才为公司制作、研发核心内容保驾护航。与中融信托、国金证券、乐道资本、景疆投资展开合作，以项目包形式成立十亿信托计划。业务重心瞄准国内整个电影产业并发力，先后投资、制作多部院线电影作品。
+                </h2>
                 <div class="row" style="max-width: 800px;margin:0 auto;">
                     <div class="col-md-4" style="padding-right:30px;">
                         <h2 class="about-content1" style="font-size:15px;text-align:left;">
-                            旗下的电影发行公司——绽放影业以电影营销和发行为核心竞争力，目前公司已投资出品《奔爱》、《不可思议》、《宝贝当家》等院线电影，16年引进发行了印度电影《巴霍巴利王》该片号称是印度最贵的电影——耗资1亿6000万人民币，上映首日获得780万美元的票房，打破多项纪录，其辉煌业绩使其成为当之无愧的国内影视行业新兴之星。同时，挚友影业致力于电影全产业链的整合与拓展，投资拍摄了《风云九州》系列、《有为青年》、《独臂悍将贺炳炎》、《血战》、《泡芙小姐1》、《最后的说书人》《小静的奔跑》《一球定乾坤》、《大数据男友》、《峰回路转》等多类型影片，成功跻身电影投资制作的领跑行列。
-                            <br/>
-                            挚友影业立足于本土市场的发展，每年稳定出品投资电影作品，以及专为视频网站打造的优质网络剧，形成以内容制作为主，线上线下营销一体化的“多屏时代”内容供应商。
+                            旗下的子公司之一成都挚友文化传播有限公司定位为互联网影视孵化及超级内容供应商，以成为网络、院线、电视台影视内部生产商中的佼佼者为目标。目前挚友传媒已投资出品《奔爱》、《不可思议》、《宝贝当家》等院线电影，发行了《巴霍巴利王1》、《丝路英雄·云镝》等优秀影视作品，同时挚友传媒致力于影视全产业链的整合与拓展，投资拍摄了《风云九州》系列、《有为青年》、《独臂悍将贺炳炎》、《泡芙小姐》、《一球定乾坤》、《峰回路转》等多类型影片，成功跻身影视投资制作的领跑行列。
                         </h2>
                     </div>
                     <div class="col-md-8" style="padding:0 30px 0 30px;">
@@ -236,7 +235,7 @@
     <div class="row" style="background: rgb(214, 217, 218);padding-top:20px;padding-bottom: 30px;">
         <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);">
             <div style="margin-top:12px;">
-                <img src="./img/header4.png" alt="挚友传媒" height="50px"/>
+                <img src="./img/header5.png" alt="挚友传媒" height="50px"/>
             </div>
             <div style="margin-top:20px;font-size:12px;">
                 <i class="fa fa-map-marker" style="margin-left:-18px;"></i> 成都公司：成都市环球中心W5/2105-2107

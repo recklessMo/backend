@@ -38,7 +38,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="/" style="padding-left:10px;">
-                <img src="./img/header4.png" alt="挚友传媒" height="50px"/>
+                <img src="./img/header5.png" alt="挚友传媒" height="50px"/>
             </a>
         </div>
 
@@ -136,7 +136,7 @@
     <div class="row" style="background: rgb(214, 217, 218);padding-top:20px;padding-bottom: 30px;">
         <div class="col-md-4 text-center" style="height: 160px;border-right: solid 1px rgba(21, 18, 18, 0.26);">
             <div style="margin-top:12px;">
-                <img src="./img/header4.png" alt="挚友传媒" height="50px"/>
+                <img src="./img/header5.png" alt="挚友传媒" height="50px"/>
             </div>
             <div style="margin-top:20px;font-size:12px;">
                 <i class="fa fa-map-marker" style="margin-left:-18px;"></i> 成都公司：成都市环球中心W5/2105-2107

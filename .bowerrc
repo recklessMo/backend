@@ -1,5 +1,5 @@
 {
   "directory" : "bower_components",
-  "proxy": "http://d.qypac.net:12484",
-  "https-proxy": "http://d.qypac.net:12484"
+  "proxy": "http://xmly:xmly2016_!@192.168.3.52:47777",
+  "https-proxy": "http://xmly:xmly2016_!@192.168.3.52:47777"
 }
